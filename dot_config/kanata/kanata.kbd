@@ -1,0 +1,293 @@
+  #|
+        grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l    ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .    /    rsft
+        lctl lmet lalt          spc            ralt rmet rctl
+  |#
+(defcfg
+ process-unmapped-keys yes
+ concurrent-tap-hold yes ;; needed for chordsv2
+ sequence-timeout 2000
+ danger-enable-cmd yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt          spc             ralt rmet rctl
+)
+
+
+
+(defalias 
+
+spc (tap-hold 200 300 spc (layer-toggle space))
+
+;; glazeWin Commands
+  wm-left  (cmd "glazewm command focus --direction left")
+  wm-right (cmd "glazewm command focus --direction right")
+  wm-up    (cmd "glazewm command focus --direction up")
+  wm-down  (cmd "glazewm command focus --direction down")
+
+  wm-full  (cmd "glazewm command toggle fullscreen")
+  wm-max   (cmd "glazewm command toggle maximized")
+  wm-float (cmd "glazewm command toggle floating")
+  wm-close (cmd "glazewm command close")
+
+;; glazewin direction layer activation
+
+spcW (tap-hold 150 250 S-5 (layer-toggle glazewinNavigation))
+
+
+
+
+
+caps (tap-hold 150 250 esc (layer-toggle capsLock))
+tab (tap-hold 150 150 tab (layer-toggle tabb))
+;; n (tap-hold 200 200 n (layer-toggle Nlayer))
+w (tap-hold 200 200 w (layer-toggle wlayer))
+
+
+mouse (tap-hold 150 200 spc (layer-toggle mouseLayer) )
+
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+
+  hscroll (tap-hold 100 150 mwl mwl)
+  jscroll (tap-hold 100 150 mwd mwd)
+  kscroll (tap-hold 100 150 mwu mwu)
+  lscroll (tap-hold 100 150 mwr mwr)
+;; The mouse wheel actions are:
+;; mwheel-up: vertical scroll up
+;; mwheel-down: vertical scroll down
+;; mwheel-left: horizontal scroll left
+;; mwheel-right: horizontal scroll right
+
+sw A-tab ;; this is for alt tab to switch to the last window
+shw A-S-tab
+st C-tab
+sht C-S-tab
+
+dr C-M-right ;; switch to right desktop
+dl C-M-left ;; switch to left desktop
+
+pr M-right ;; place the current window to the right side
+pl M-left ;; place the current window to the left side
+pu M-up ;; place the current window to above
+pd M-down ;; place the current window down
+
+;; To switch btw diff applications
+
+ssb f23 ;; for brave
+ssc f24 ;; for vscode
+ssw f21 ;; for wezterm
+sso f20 ;; for obsidian
+ssai M-S-F23
+
+;; some basics fn? ig
+cw A-F4
+
+;; home row mods
+
+;; lmet (t! charmod a lmet)
+;; lsft (t! charmod s lsft)
+;; laltf (t! charmod f lalt)
+;; lalt (t! charmod j lalt)
+;; rctl (t! charmod k rctl)
+;; rsft (t! charmod l rsft)
+;; rmet (t! charmod ; rmet)
+;; raltv (t! charmod v ralt)
+;; ralt (t! charmod m ralt)
+
+
+  a (t! charmod a lmet)
+  s (t! charmod s lsft)
+  d (t! charmod d lctl)
+  f (t! charmod f lalt)
+  j (t! charmod j lalt)
+  k (t! charmod k rctl)
+  l (t! charmod l rsft)
+  ; (t! charmod ; rmet)
+  ;; v (t! charmod v ralt)
+  ;; m (t! charmod m ralt)
+
+;; for space layer
+
+
+  1 (t! charmod 1 lmet)
+  2 (t! charmod 2 lsft)
+  3 (t! charmod 3 lctl)
+  4 (t! charmod 4 lalt)
+  7 (t! charmod 7 lalt)
+  8 (t! charmod 8 rctl)
+  9 (t! charmod 9 rsft)
+  0 (t! charmod 0 rmet)
+
+;; for vim splits navigation
+
+Vsplit (tap-hold 150 200 v (layer-toggle VimSplits))
+mach (macro C-w h)
+macj (macro C-w j)
+mack (macro C-w k)
+macl (macro C-w l)
+macm (macro C-w m)
+onbf (macro C-w x)
+bdel (macro spc q q)
+
+Vresize (tap-hold 150 200 v (layer-toggle VresizeLayer))
+
+cgh (macro C-w S-,)   ;; shrink width (left)
+cgl (macro C-w S-.)   ;; expand width (right)
+cgj (macro C-w -)   ;; shrink height (down)
+cgk (macro C-w S-=)   ;; expand height (up)
+
+
+
+Vcomment (tap-hold 150 200 c (layer-toggle VcommentLayer))
+cbl (macro C-g j)
+cal (macro C-g k)
+ccl (macro C-g l) ;; commens current line
+
+)
+
+(deftemplate charmod (char mod)
+  (switch 
+    ((key-timing 3 less-than 250)) $char break
+    () (tap-hold-release-timeout 200 500 $char $mod $char) break
+  )
+)
+;; w is for cycle betweem applicatioms
+(deflayer base   
+
+             grv   1        2     3           4           5     6    7     8    9    0      -    =    bspc
+             @tab  q       @w     e           r           t     y    u     i    o    p      [    ]    \
+             @caps @a      @s    @d          @f           g     h    @j    @k    @l    @;      '    ret
+             lsft  z        x  @Vcomment     @Vsplit      b     n    m ,    .    /      rsft
+             lctl  lmet    lalt          @spc                         ralt rmet rctl
+
+)
+
+(deflayer space
+
+     grv  @ssb  @ssw    @sso   @ssai    5      6        7        8        9       @ssc     -     =       bspc
+     tab  q     @spcW    =       S-6     -    S-0        ]        S-1     S-2      p        @dl   @dr       \
+     caps @1    @2      @3       @4     5      6       @7       @8      @9       @0        '     ret
+     lsft z    S-4     S-3      S-6    grv     S-7      S-8      home    end      /        rsft
+     lctl lmet lalt          spc               ralt     rmet     rctl 
+
+)
+
+(deflayer capsLock
+;; Making a mouse switch toggle to control mouse movements ofcourse @mouse
+
+             grv  1    2    3    4    5     6          7        8      9        0       -    =    bspc
+             tab  q    w    e    r    t     y          u        i      o        p       [    ]    \
+             caps @a   @s   @d  @f    g    left       down      up     right    ;      A-`   caps
+             lsft z    x    c    v    b    tab        S-tab     S-6    S-4      /      rsft
+             lctl lmet lalt          @mouse                        ralt rmet rctl
+)
+
+;; Mouse actions
+;; You can click the left, middle, and right buttons using kanata actions as well as do vertical and horizontal scrolling.
+;; The mouse button actions are:
+;; mlft: left mouse button
+;; mmid: middle mouse button
+;; mrgt: right mouse button
+
+;;   mwu (mwheel-up 50 120)
+;;   mwd (mwheel-down 50 120)
+;;   mwl (mwheel-left 50 120)
+;;   mwr (mwheel-right 50 120)
+
+(deflayer mouseLayer
+            grv  1    2    3    4    5    6     7        8       9      0    -    =    bspc
+            tab  q    w    e    r    t    y     mlft      mmid   mrgt    p    [    ]    \
+            caps a    s    d    f    g   @mwr    @mwd      @mwu    @mwl     ;    '    ret
+            lsft z    x    c    v    b    n     m        ,       .      /    rsft
+            lctl lmet lalt          spc                  ralt    rmet   rctl
+)
+
+
+(deflayer tabb
+
+        grv  1    2    3    4    5      6      7       8      9     0    -    =    bspc
+        tab  q    w    e    r    t      y      u       i      o     p    [    ]    \
+        caps a    s    d    f    g     @pl     @pd    @pu    @pr    ;    '    ret
+        lsft z    x    c    v    b      n      m     ,    .    /    rsft
+        lctl lmet lalt          spc               ralt rmet rctl
+)
+
+(deflayer wlayer
+
+        grv  1    2    3    4    5    6      7     8          9    0    -    =    bspc
+        tab  q    w    e    r    t    y      u     i          o    p    [    ]    \
+        caps a    s    d    f    g   @sht   @sw    @shw      @st    ;    '    ret
+        lsft z    x    c    v    b    n    m        ,         .    /    rsft
+        lctl lmet lalt          spc               ralt rmet rctl
+
+)
+
+
+(deflayer VimSplits
+
+        grv  1    2     3    4       5    6        7     8     9      0    -    =    bspc
+        tab  q    w     e    r       t    y        u     i     o      p    [    ]    \
+        caps a    s   @bdel    f       g   @mach  @macj  @mack  @macl @macm    '    ret
+        lsft z    x     c    v       b    @onbf      m     ,     .      /    rsft
+        lctl lmet lalt            @Vresize                ralt rmet rctl
+)
+
+(deflayer VcommentLayer
+;; on c
+        grv  1    2    3    4    5    6    7    8       9        0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i       o        p    [    ]    \
+        caps a    s    d    f    g    h   @cbl  @cal    @ccl     ;    '    ret
+        lsft z    x    c    v    b    n    m    ,       .        /    rsft
+        lctl lmet lalt          spc            ralt    rmet     rctl
+)
+
+(deflayer VresizeLayer
+
+        grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+        caps a    s    d    f    g   @cgh @cgj @cgk @cgl    ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .    /    rsft
+        lctl lmet lalt          spc            ralt rmet rctl
+)
+
+(deflayer nothing
+        grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l    ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .    /    rsft
+        lctl lmet lalt          spc            ralt rmet rctl
+)
+
+  ;; wm-left  (cmd "glazewm command focus --direction left")
+  ;; wm-right (cmd "glazewm command focus --direction right")
+  ;; wm-up    (cmd "glazewm command focus --direction up")
+  ;; wm-down  (cmd "glazewm command focus --direction down")
+
+  ;; wm-full  (cmd "glazewm command toggle fullscreen")
+  ;; wm-max   (cmd "glazewm command toggle maximized")
+  ;; wm-float (cmd "glazewm command toggle floating")
+  ;; wm-close (cmd "glazewm command close")
+
+(deflayer glazewinNavigation
+grv  1    2    3    4    5    6          7         8      9           0    -    =    bspc
+tab  q    w    e    r    t    y          u         i      o           p    [    ]    \
+caps a    s    d    f    g   @wm-left  @wm-down @wm-up   @wm-right    ;    '    ret
+lsft z    x    c    v    b    n          m          ,      .          /    rsft
+lctl lmet lalt          spc                        ralt   rmet       rctl
+)
+
+
+
+
+
+

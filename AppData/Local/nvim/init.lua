@@ -1,0 +1,87 @@
+-- ~/.config/nvim/init.lua
+-- Important
+vim.g.mapleader = " "
+
+vim.g.treesitter_compiler = "clang"
+vim.g.maplocalleader = "," -- Local leader (e.g. <localleader>r for Grug-FAR)
+
+-- To check Env
+_G.is_termux = vim.fn.executable("termux-info") == 1 and vim.fn.getenv("PREFIX") == "/data/data/com.termux/files/usr"
+-- print("Termux detected:", is_termux)
+-- Load core configuration
+
+if vim.fn.has("win32") == 1 then
+        vim.opt.shell = "pwsh"
+        vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+        vim.opt.shellquote = ""
+        vim.opt.shellxquote = ""
+end
+
+-- Load shit idk what even is
+-- Add your plugin path to runtime during dev
+-- Formatters
+require("core.formatting")
+
+-- config debugging
+require("utils.lspConfig")
+
+-- Fzf
+require("fzf.commander")
+require("fzf.fzf-keymaps")
+require("fzf.fzfPaste")
+
+require("core.custom")
+-- Load plugin configurations
+require("plugins.lazy-init")
+-- Load Commander
+-- Load LineNumber configurations
+require("utils.line_mode")
+require("utils.comments")
+-- require("utils.cursorJump")
+
+-- For Termux
+require("termux.clipboardFix")
+-- To reload
+
+require("core.options")
+require("core.keymaps")
+require("core.autocmds")
+
+-- for node stuff
+-- require("node.quickfix")
+
+-- enhancers Lol
+require("core.enhancers")
+require("core.reports")
+require("core.diagnostics")
+require("core.lineRunner")
+require("core.notifyQuickfix")
+require("core.buffers") -- Needs to support multiple buffer deletion; ugh this is so poory made
+require("core.quickSwitcher")
+require("core.fileRunner")
+require("core.commandLine")
+require("core.move_or_resize")
+require("core.comment")
+require("core.transform")
+require("core.messageBoard")
+-- require("core.rough_board")
+require("core.caseConversion")
+require("core.trace_view")
+-- require("core.float")
+require("core.cycle_floats")
+require("core.moduleGrep")
+require("core.reloader")
+
+-- Experimentation js
+require("node.dom_function_test")
+
+-- Utility Functions
+require("utils.buffer")
+require("utils.code")
+require("utils.git-fn")
+require("utils.rough_float")
+require("utils.python-interpreter")
+require("utils.floating_win")
+
+--experimentation picker
+require("picker.picker")

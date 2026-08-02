@@ -1,0 +1,206 @@
+0000000000000000000000000000000000000000 0767d3e32b56e7961b17612f45162da6c2df9c2f praveenscript <praveenkumarjkr@gmail.com> 1752224674 +0530	commit (initial): first commit
+0767d3e32b56e7961b17612f45162da6c2df9c2f c2b3b7bb8949d8dcfe5aca9be0e102fe710f2019 praveenscript <praveenkumarjkr@gmail.com> 1752548536 +0530	commit: new plugins
+c2b3b7bb8949d8dcfe5aca9be0e102fe710f2019 ac4dc3abb4400218d2244f06274225011029d78c praveenscript <praveenkumarjkr@gmail.com> 1752672821 +0530	commit: another update
+ac4dc3abb4400218d2244f06274225011029d78c 77021cb4cb06e1f8e32e502d027b02f276333b4b praveenscript <praveenkumarjkr@gmail.com> 1752898070 +0530	commit: new updates
+77021cb4cb06e1f8e32e502d027b02f276333b4b e9145be68e1c18b4e6481449724b1c6693e8e560 praveenscript <praveenkumarjkr@gmail.com> 1752899362 +0530	commit: added support for clipboard termux + clipboard keymaps
+e9145be68e1c18b4e6481449724b1c6693e8e560 46a599c89deae3adbc9f9951d664553654f838c9 praveenscript <praveenkumarjkr@gmail.com> 1752902709 +0530	commit: testing
+46a599c89deae3adbc9f9951d664553654f838c9 bd04000b30af6f8de79a39b2697a16d5e7aabb0c praveenscript <praveenkumarjkr@gmail.com> 1752907899 +0530	commit: uh
+bd04000b30af6f8de79a39b2697a16d5e7aabb0c 14a7509cd236573922d156619945dbdb3a04949f praveenscript <praveenkumarjkr@gmail.com> 1752989858 +0530	commit: tried to fix termux paste
+14a7509cd236573922d156619945dbdb3a04949f b6f019f3e288c42ad140a65feb4cee0ab70ab949 praveenscript <praveenkumarjkr@gmail.com> 1752991217 +0530	commit: fixes config for termus I guess
+b6f019f3e288c42ad140a65feb4cee0ab70ab949 a04f839ab8db3a4fb50e5d63c62bfc5539c7d5d6 praveenscript <praveenkumarjkr@gmail.com> 1753108377 +0530	commit: added new plugins and some keymaps
+a04f839ab8db3a4fb50e5d63c62bfc5539c7d5d6 5c1527a8da7890da1e26bff07a9e89e4792b1833 praveenscript <praveenkumarjkr@gmail.com> 1753112754 +0530	commit: Updated dashboard structure by adding phew fancy quotes will add more I know total wastetime but it's fun
+5c1527a8da7890da1e26bff07a9e89e4792b1833 65601b02acd359aa23803551c764fcab5df1ba43 praveenscript <praveenkumarjkr@gmail.com> 1753180245 +0530	commit: fixed two lsp running at once
+65601b02acd359aa23803551c764fcab5df1ba43 52b64a896d2345043091889ffaa60443392f361d praveenscript <praveenkumarjkr@gmail.com> 1753189036 +0530	commit: fix oil
+52b64a896d2345043091889ffaa60443392f361d 54a7884eb05f43bd0a84771199a4725e0bfc78e7 praveenscript <praveenkumarjkr@gmail.com> 1753191778 +0530	commit: fixed lsp
+54a7884eb05f43bd0a84771199a4725e0bfc78e7 fcee073773133485f97869b652c2809707587e74 praveenscript <praveenkumarjkr@gmail.com> 1753193658 +0530	commit: fix file path issue
+fcee073773133485f97869b652c2809707587e74 e626e36ed1f55637ac7da0a97666ada67e9a1c83 praveenscript <praveenkumarjkr@gmail.com> 1753453820 +0530	commit: fixing issues which I created welp
+e626e36ed1f55637ac7da0a97666ada67e9a1c83 86966df1b382d68c9281b00baa03281185adb929 praveenscript <praveenkumarjkr@gmail.com> 1756090028 +0530	commit: big update
+86966df1b382d68c9281b00baa03281185adb929 1195ade5bef6761e89f6fbab9618766540a858f4 praveenscript <praveenkumarjkr@gmail.com> 1757937242 +0530	commit: big update
+1195ade5bef6761e89f6fbab9618766540a858f4 9637a3ffbb5da3243c83907627283cc3b96ac74a praveenscript <praveenkumarjkr@gmail.com> 1758524959 +0530	commit: added autoclose tag plugin
+9637a3ffbb5da3243c83907627283cc3b96ac74a 447495f49913538a97cf75376979ae2b679cb5fe praveenscript <praveenkumarjkr@gmail.com> 1758530745 +0530	commit: added html emmets
+447495f49913538a97cf75376979ae2b679cb5fe 7fac4f60e0046be365f7242bc486f6402c2ea8fd praveenscript <praveenkumarjkr@gmail.com> 1758862260 +0530	commit: improvements
+7fac4f60e0046be365f7242bc486f6402c2ea8fd 6ded31d875a85d7fca24fe2485230f9c9d831fe3 praveenscript <praveenkumarjkr@gmail.com> 1758893355 +0530	commit: added splitwise for splits
+6ded31d875a85d7fca24fe2485230f9c9d831fe3 ce7101c75ecfd6340fe9301d62c90e5f90bb6042 praveenscript <praveenkumarjkr@gmail.com> 1759027265 +0530	commit: added plugins and replace nvim-cmp with blink
+ce7101c75ecfd6340fe9301d62c90e5f90bb6042 f9db9c1727742d61fd510588e19872f0be33f2e9 praveenscript <praveenkumarjkr@gmail.com> 1759029586 +0530	commit: replace telescope with fzf
+f9db9c1727742d61fd510588e19872f0be33f2e9 3a8212b5b244ec39f3957ca9fdba08f4c8188d49 praveenscript <praveenkumarjkr@gmail.com> 1759037259 +0530	commit: improvements
+3a8212b5b244ec39f3957ca9fdba08f4c8188d49 1506441545ed9d0d7e5020a3b4b39f308cf501b1 praveenscript <praveenkumarjkr@gmail.com> 1759039761 +0530	commit: fixed cmp issue and telescope cleanup
+1506441545ed9d0d7e5020a3b4b39f308cf501b1 db51488735cdc1710f4ae625ca340efbe60c126e praveenscript <praveenkumarjkr@gmail.com> 1759042424 +0530	commit: changed dashboard plugin
+db51488735cdc1710f4ae625ca340efbe60c126e 31641d0999f8b66eb4ca199abf0fc541c3cea851 praveenscript <praveenkumarjkr@gmail.com> 1759052307 +0530	commit: major plugins changes
+31641d0999f8b66eb4ca199abf0fc541c3cea851 3577f6dc73c4346a32f2232a3a881d5787f691f4 praveenscript <praveenkumarjkr@gmail.com> 1759075962 +0530	commit: replaced some plugins with snacks
+3577f6dc73c4346a32f2232a3a881d5787f691f4 3797dca5fb20815feb0bad5de9949b4bd0938b86 praveenscript <praveenkumarjkr@gmail.com> 1759076159 +0530	commit: old plugins cleanup
+3797dca5fb20815feb0bad5de9949b4bd0938b86 f3fca823d87f6e397ad588988f34e1297bff81c2 praveenscript <praveenkumarjkr@gmail.com> 1759078124 +0530	commit: added few more plugins
+f3fca823d87f6e397ad588988f34e1297bff81c2 e519162f072b1a53d7c89afc3f76052139c37710 praveenscript <praveenkumarjkr@gmail.com> 1759079277 +0530	commit: more cleanups
+e519162f072b1a53d7c89afc3f76052139c37710 667e886a9bfe2d41ee2fb1d9d9ff0d79f49df0d0 praveenscript <praveenkumarjkr@gmail.com> 1759115128 +0530	commit: fixed lua_ls keep scanning folders
+667e886a9bfe2d41ee2fb1d9d9ff0d79f49df0d0 1d7740b90c584ef3cdf243765d73c083521a437f praveenscript <praveenkumarjkr@gmail.com> 1759115146 +0530	commit: fixed lua_ls keep scanning folders
+1d7740b90c584ef3cdf243765d73c083521a437f 69f1e85e9947546d7ace39736e77869fec00ed08 praveenscript <praveenkumarjkr@gmail.com> 1759121324 +0530	commit: added mini surround and some clean ups
+69f1e85e9947546d7ace39736e77869fec00ed08 7dcc0249c465d77a1f1b5523033019c98b213752 praveenscript <praveenkumarjkr@gmail.com> 1759232677 +0530	commit: fixed keys conflicts
+7dcc0249c465d77a1f1b5523033019c98b213752 b4248f015a5296f06ff367a7017f317a5be0a344 praveenscript <praveenkumarjkr@gmail.com> 1759466290 +0530	commit: removed dictionary from blink.cmp
+b4248f015a5296f06ff367a7017f317a5be0a344 74edee1fb7eccff5939b14ee9f106d717de8dde3 praveenscript <praveenkumarjkr@gmail.com> 1759499911 +0530	commit: removed
+74edee1fb7eccff5939b14ee9f106d717de8dde3 4505d2a6a72b747dbef850e584ccb88a6c468c5c praveenscript <praveenkumarjkr@gmail.com> 1759499933 +0530	commit: updating whole lspconfig
+4505d2a6a72b747dbef850e584ccb88a6c468c5c dd4db282ea37ae80012e427d0513aa1556872c2b praveenscript <praveenkumarjkr@gmail.com> 1759500008 +0530	commit: fixed multiple signature help
+dd4db282ea37ae80012e427d0513aa1556872c2b 697a58ce300585d5bde04bdf9bec791cc465c175 praveenscript <praveenkumarjkr@gmail.com> 1759505570 +0530	commit: just committing to get it back if I mess up lol
+697a58ce300585d5bde04bdf9bec791cc465c175 572b11f1531f51dc765a03a75fcd793aaa6b46e6 praveenscript <praveenkumarjkr@gmail.com> 1759508420 +0530	commit: removed mason
+572b11f1531f51dc765a03a75fcd793aaa6b46e6 02bea821ba1935c75e9057ccba908b719edd96fb praveenscript <praveenkumarjkr@gmail.com> 1759548741 +0530	commit: added mason back
+02bea821ba1935c75e9057ccba908b719edd96fb 933293319625eb47c464f0ef77b84f263714030f praveenscript <praveenkumarjkr@gmail.com> 1759548813 +0530	commit: fixed stylua quit error
+933293319625eb47c464f0ef77b84f263714030f 7c06856374fa9e2cc7562e9bd0450af08fec5167 praveenscript <praveenkumarjkr@gmail.com> 1759660440 +0530	commit: change formatting to conform
+7c06856374fa9e2cc7562e9bd0450af08fec5167 6c1478566972d88683a95f7a4364b96c4269c44c praveenscript <praveenkumarjkr@gmail.com> 1763043925 +0530	commit: a lot of improvements
+6c1478566972d88683a95f7a4364b96c4269c44c 91303436b169e0e153a25ba48a51fb35ed514181 praveenscript <praveenkumarjkr@gmail.com> 1763043995 +0530	commit: sorting require after lazy
+91303436b169e0e153a25ba48a51fb35ed514181 70ff0408ee85d69a8a6859fca1c28d8c9ec7d451 praveenscript <praveenkumarjkr@gmail.com> 1763559409 +0530	commit: few adjustments
+70ff0408ee85d69a8a6859fca1c28d8c9ec7d451 116075a4402c66fc9a020062f69131d7a5e3fe7c praveenscript <praveenkumarjkr@gmail.com> 1763737390 +0530	commit: added deletionMenu for buffer weird thing
+116075a4402c66fc9a020062f69131d7a5e3fe7c 4f6620ad653e676e95501dd0ae8fcaba70805c0d praveenscript <praveenkumarjkr@gmail.com> 1763815155 +0530	commit: added quickSwitcher for buffers
+4f6620ad653e676e95501dd0ae8fcaba70805c0d f4e6186294fa89a96f892915c1c166942a1c1742 praveenscript <praveenkumarjkr@gmail.com> 1763828139 +0530	commit: added a file runner
+f4e6186294fa89a96f892915c1c166942a1c1742 9d5de17abae01bcd6aa90c06c44e35d311c275f7 praveenscript <praveenkumarjkr@gmail.com> 1764044367 +0530	commit: improved quickSwitcher buffers.lua
+9d5de17abae01bcd6aa90c06c44e35d311c275f7 2713da9c44e6ef9aff39a7f90d2f83f0ea41dc9a praveenscript <praveenkumarjkr@gmail.com> 1764153849 +0530	commit: added a temporary buffer to run cmds from buffer itself
+2713da9c44e6ef9aff39a7f90d2f83f0ea41dc9a d0309099a7da4769047142edcbf718345b324d67 praveenscript <praveenkumarjkr@gmail.com> 1764153920 +0530	commit: few improvements
+d0309099a7da4769047142edcbf718345b324d67 5961d8dd68b0b1c5354112ec14f0a72926312aee praveenscript <praveenkumarjkr@gmail.com> 1764153951 +0530	commit: nothing
+5961d8dd68b0b1c5354112ec14f0a72926312aee ec41a6c52cdc627eec3930ebc871ec30e454c342 praveenscript <praveenkumarjkr@gmail.com> 1764345449 +0530	commit: new commit motions
+ec41a6c52cdc627eec3930ebc871ec30e454c342 879505c5550a1f5de36b4287bb32171262ff4d2f praveenscript <praveenkumarjkr@gmail.com> 1764345468 +0530	commit: new keymaps
+879505c5550a1f5de36b4287bb32171262ff4d2f 25ba84f8feaa5471c06139a1f348dfe15ecdfe3d praveenscript <praveenkumarjkr@gmail.com> 1764345514 +0530	commit: added move or resize motions
+25ba84f8feaa5471c06139a1f348dfe15ecdfe3d 61bc0d5ab767c03babbeb5e55802799d85e2aa59 praveenscript <praveenkumarjkr@gmail.com> 1764345541 +0530	commit: now eats keys after switching
+61bc0d5ab767c03babbeb5e55802799d85e2aa59 f3e1f2f9a236fc8f2a562e39c5c2669376413001 praveenscript <praveenkumarjkr@gmail.com> 1764345572 +0530	commit: plugins update
+f3e1f2f9a236fc8f2a562e39c5c2669376413001 b21d713a1406039244b4057c93fc802a3a160cb1 praveenscript <praveenkumarjkr@gmail.com> 1764345610 +0530	commit: idk
+b21d713a1406039244b4057c93fc802a3a160cb1 26068c86d10e66749de9ef192229fc50cf02048e praveenscript <praveenkumarjkr@gmail.com> 1764345625 +0530	commit: new cores
+26068c86d10e66749de9ef192229fc50cf02048e 76c30aee4fc6581c996b54b3666ca5343cf8ff9b praveenscript <praveenkumarjkr@gmail.com> 1764602163 +0530	commit: added a keymap alt+shift hjkl to copy below/above
+76c30aee4fc6581c996b54b3666ca5343cf8ff9b 189aee88b9efad04e3797de6af2ed54e60fa8607 praveenscript <praveenkumarjkr@gmail.com> 1764602205 +0530	commit: moves or resizes current buffer
+189aee88b9efad04e3797de6af2ed54e60fa8607 d642f494f0c6980ab8356b96c38171db752f65a5 praveenscript <praveenkumarjkr@gmail.com> 1764602221 +0530	commit: delete on_attach
+d642f494f0c6980ab8356b96c38171db752f65a5 51302f7733425d12ffd4ba0d58bb41403be6b8e1 praveenscript <praveenkumarjkr@gmail.com> 1764602234 +0530	commit: new plugin
+51302f7733425d12ffd4ba0d58bb41403be6b8e1 0b9149dfecab45602fc357242a6261c100f5b5fc praveenscript <praveenkumarjkr@gmail.com> 1764602395 +0530	commit: working on this, a buffer to manage notifications
+0b9149dfecab45602fc357242a6261c100f5b5fc 4a417754cb713aecec5b98ffa673f59cc684def8 praveenscript <praveenkumarjkr@gmail.com> 1764602428 +0530	commit: trying to build a new picker, broken right now
+4a417754cb713aecec5b98ffa673f59cc684def8 f5983da3cea87d75e8d69d80b42dfce4309cf29b praveenscript <praveenkumarjkr@gmail.com> 1764688082 +0530	commit: few changes, new keymaps
+f5983da3cea87d75e8d69d80b42dfce4309cf29b e35fa5ec3f9d0f16ff9900444d047a38831687da praveenscript <praveenkumarjkr@gmail.com> 1764779460 +0530	commit: upgraded gf motion for if file doesn't exists it creates it
+e35fa5ec3f9d0f16ff9900444d047a38831687da 7725e74f5ae00c5a7ceae7e32d7ca7759b3b6648 praveenscript <praveenkumarjkr@gmail.com> 1764779472 +0530	commit: new keymaps
+7725e74f5ae00c5a7ceae7e32d7ca7759b3b6648 5316debb6cde1a2685b8dc791259e5f915f8cc18 praveenscript <praveenkumarjkr@gmail.com> 1764779494 +0530	commit: upgraded messageboard so it can move while floating
+5316debb6cde1a2685b8dc791259e5f915f8cc18 92547ae221f7abbe44d0ff2ccab85d5243fd0fb5 praveenscript <praveenkumarjkr@gmail.com> 1764779508 +0530	commit: new plugin refractor
+92547ae221f7abbe44d0ff2ccab85d5243fd0fb5 aa595835d100758cc4c1d8a724e7a9582f229083 praveenscript <praveenkumarjkr@gmail.com> 1764843125 +0530	commit: deletes the loop wrapper, bugs doesn't do anything for indentation
+aa595835d100758cc4c1d8a724e7a9582f229083 17b484f10d025dd6650af024e711503e67f90a32 praveenscript <praveenkumarjkr@gmail.com> 1764843188 +0530	commit: added/replace few plugins
+17b484f10d025dd6650af024e711503e67f90a32 36f372ff9ee912507fec7ad276a542bcecbdc060 praveenscript <praveenkumarjkr@gmail.com> 1765087401 +0530	commit: few improvements
+36f372ff9ee912507fec7ad276a542bcecbdc060 311846070a1b45149a7a91df13b54b5bd8747c71 praveenscript <praveenkumarjkr@gmail.com> 1765116679 +0530	commit: reversed notification list
+311846070a1b45149a7a91df13b54b5bd8747c71 31eff463cbf5e704dba761f518f5df772f7b3365 praveenscript <praveenkumarjkr@gmail.com> 1765116701 +0530	commit: removed :is_active
+31eff463cbf5e704dba761f518f5df772f7b3365 b2a5f1e5538e9f18c425735f57563deea12258c1 praveenscript <praveenkumarjkr@gmail.com> 1765167281 +0530	commit: obsidian keymaps
+b2a5f1e5538e9f18c425735f57563deea12258c1 917f3ce688bd44b1ee71b337b95ba0cec83cb076 praveenscript <praveenkumarjkr@gmail.com> 1765167299 +0530	commit: nothing
+917f3ce688bd44b1ee71b337b95ba0cec83cb076 33575fa0560560129546daaae288c60e4ec36149 praveenscript <praveenkumarjkr@gmail.com> 1765167317 +0530	commit: deleted old config
+33575fa0560560129546daaae288c60e4ec36149 1949b734d5e94da8ef29263c6cc8b65e6b092aaf praveenscript <praveenkumarjkr@gmail.com> 1765167330 +0530	commit: removed previous configs
+1949b734d5e94da8ef29263c6cc8b65e6b092aaf 68edbba01a4d5d129b919baec40d385f62331dad praveenscript <praveenkumarjkr@gmail.com> 1765181720 +0530	commit: replace rendermarkdown with markview works better
+68edbba01a4d5d129b919baec40d385f62331dad 0afaef390c7f0e9e8f3f1516cd0384a73929d08f praveenscript <praveenkumarjkr@gmail.com> 1765181732 +0530	commit: added annotations
+0afaef390c7f0e9e8f3f1516cd0384a73929d08f 6fec8c5fc3a747ddae32dca62440b8463ac5b050 praveenscript <praveenkumarjkr@gmail.com> 1765181744 +0530	commit: few keymaps
+6fec8c5fc3a747ddae32dca62440b8463ac5b050 4d87ad4af3862770f5e05b272192ee3d7bd4df62 praveenscript <praveenkumarjkr@gmail.com> 1765181763 +0530	commit: added utility fns
+4d87ad4af3862770f5e05b272192ee3d7bd4df62 fd0a0a7c96f7c3e0af87d5db7358fee1db758863 praveenscript <praveenkumarjkr@gmail.com> 1765292660 +0530	commit: weird automation
+fd0a0a7c96f7c3e0af87d5db7358fee1db758863 7a8cb021b42e3087f44ce8c9bb68e2850bd1a8df praveenscript <praveenkumarjkr@gmail.com> 1765292698 +0530	commit: fixed lazyDev
+7a8cb021b42e3087f44ce8c9bb68e2850bd1a8df ab125c409ba2e23b238927a16208470a4957f16d praveenscript <praveenkumarjkr@gmail.com> 1765292708 +0530	commit: added lazyDev
+ab125c409ba2e23b238927a16208470a4957f16d 8abd3a841941a01f02c45f69f7808deb6e7e2c64 praveenscript <praveenkumarjkr@gmail.com> 1765292727 +0530	commit: fixed the luaLs issue by using lazydev instead
+8abd3a841941a01f02c45f69f7808deb6e7e2c64 d7c559602bd759da58aa7c211143360c395bb28d praveenscript <praveenkumarjkr@gmail.com> 1765292756 +0530	commit: removed defaults lua_ls settings because of lazyDev
+d7c559602bd759da58aa7c211143360c395bb28d bedaabeff0acad5d522a4f2b3e54650577ef4a3b praveenscript <praveenkumarjkr@gmail.com> 1765292767 +0530	commit: added more modules
+bedaabeff0acad5d522a4f2b3e54650577ef4a3b 448cd5c19d791958ff730a6f85f59056ea58f29d praveenscript <praveenkumarjkr@gmail.com> 1765292782 +0530	commit: making more modules
+448cd5c19d791958ff730a6f85f59056ea58f29d 53f9f67150c0476c1d268e154b73a88f65e1cd16 praveenscript <praveenkumarjkr@gmail.com> 1765292796 +0530	commit: update
+53f9f67150c0476c1d268e154b73a88f65e1cd16 2560fd7c0e3683499c6aadad8b663e1fb2013543 praveenscript <praveenkumarjkr@gmail.com> 1765292816 +0530	commit: deleted because no longer needed
+2560fd7c0e3683499c6aadad8b663e1fb2013543 806bac486e7b84f5cb21854524253a194f170c60 praveenscript <praveenkumarjkr@gmail.com> 1765340831 +0530	commit: disabled rust implementation for termux config
+806bac486e7b84f5cb21854524253a194f170c60 9f550cc78485a8cc476ce92ee9814d70e8a6c6a0 praveenscript <praveenkumarjkr@gmail.com> 1765340911 +0530	pull --no-edit: Merge made by the 'ort' strategy.
+9f550cc78485a8cc476ce92ee9814d70e8a6c6a0 fc6ce3201b6982163741f2f9858878ec5f59f9ef praveenscript <praveenkumarjkr@gmail.com> 1765466943 +0530	commit: set treesitter compiler to clang
+fc6ce3201b6982163741f2f9858878ec5f59f9ef 4dd93c7f50c9415b72f336e5a2eb3ac0cb292cd0 praveenscript <praveenkumarjkr@gmail.com> 1765612670 +0530	commit: fixed mini files messed up name
+4dd93c7f50c9415b72f336e5a2eb3ac0cb292cd0 f9de32f03b92a53cc37e70f5280f7538f71d8b74 praveenscript <praveenkumarjkr@gmail.com> 1765612685 +0530	commit: added all mini plugins in one file
+f9de32f03b92a53cc37e70f5280f7538f71d8b74 0fb2eb9b73a9361b4c6e88a79fc59ae92f416ff4 praveenscript <praveenkumarjkr@gmail.com> 1765612711 +0530	commit: added miniMove in mini-suite
+0fb2eb9b73a9361b4c6e88a79fc59ae92f416ff4 54a720d9ca443139900b561ac65ed0d66d1a6267 praveenscript <praveenkumarjkr@gmail.com> 1765640053 +0530	commit: new implementation of picker from es sources
+54a720d9ca443139900b561ac65ed0d66d1a6267 5a54023f3c2358d3671b80e3f257c3ff6aba6bd0 praveenscript <praveenkumarjkr@gmail.com> 1765640086 +0530	commit: removed duplication of same plugin require twice
+5a54023f3c2358d3671b80e3f257c3ff6aba6bd0 fe881a43f51b8c3b6330c29e576edf7bf23fb4f9 praveenscript <praveenkumarjkr@gmail.com> 1765640110 +0530	commit: nothing
+fe881a43f51b8c3b6330c29e576edf7bf23fb4f9 162ce916c1c60e98f31845b85a436d79e186d7cb praveenscript <praveenkumarjkr@gmail.com> 1765640131 +0530	commit: nothing
+162ce916c1c60e98f31845b85a436d79e186d7cb e293c7ef37fbadc301e31c949aa463914e121106 praveenscript <praveenkumarjkr@gmail.com> 1765640149 +0530	commit: added some path related modules
+e293c7ef37fbadc301e31c949aa463914e121106 82696d603659667ed72e320fe1f91fd1c932fbfa praveenscript <praveenkumarjkr@gmail.com> 1765640169 +0530	commit: added more gitignore files
+82696d603659667ed72e320fe1f91fd1c932fbfa 43e153e472dd9ddb16878dc8ec028fadc5b7a1a3 praveenscript <praveenkumarjkr@gmail.com> 1765640217 +0530	commit: nothing
+43e153e472dd9ddb16878dc8ec028fadc5b7a1a3 aee60456c5f2554ef72f73f3cca468609fd43b6e praveenscript <praveenkumarjkr@gmail.com> 1765640251 +0530	commit: added recorder macro section in it, and some useless ones too probably gonna delete them next
+aee60456c5f2554ef72f73f3cca468609fd43b6e b0d49f1e9ed49075602bb3545e2649d5ccbfaaae praveenscript <praveenkumarjkr@gmail.com> 1765701753 +0530	commit: deleted
+b0d49f1e9ed49075602bb3545e2649d5ccbfaaae 3d7982f01a4025461e8e0c04a5fc0305f3d01d7f praveenscript <praveenkumarjkr@gmail.com> 1765701789 +0530	pull --no-edit: Merge made by the 'ort' strategy.
+3d7982f01a4025461e8e0c04a5fc0305f3d01d7f 85c2e636d16cd1506a48fb4fccea41868b40a999 praveenscript <praveenkumarjkr@gmail.com> 1765728497 +0530	commit: adding useless docs
+85c2e636d16cd1506a48fb4fccea41868b40a999 48b80abda3fd28ff6ea73a8f9fd7659acf64dcc5 praveenscript <praveenkumarjkr@gmail.com> 1765728520 +0530	commit: removed useless imports
+48b80abda3fd28ff6ea73a8f9fd7659acf64dcc5 a59d931c352596d40895c63ed4128b31e7aace0b praveenscript <praveenkumarjkr@gmail.com> 1765728566 +0530	commit: rough board for uh for rough code
+a59d931c352596d40895c63ed4128b31e7aace0b c53c812443565ee2b811cc82b59629fde644ac33 praveenscript <praveenkumarjkr@gmail.com> 1765728601 +0530	commit: added event and ft
+c53c812443565ee2b811cc82b59629fde644ac33 75643330a7dde87c8fa0a6e593ec904961099e59 praveenscript <praveenkumarjkr@gmail.com> 1765728623 +0530	commit: changed cursorlineNr color to magenta
+75643330a7dde87c8fa0a6e593ec904961099e59 8d35ae32844497dd38078884abf3777d5984ad7f praveenscript <praveenkumarjkr@gmail.com> 1765728636 +0530	commit: one more core import
+8d35ae32844497dd38078884abf3777d5984ad7f 31701259d46371c36bdb6919ab34c6ea9a88b93b praveenscript <praveenkumarjkr@gmail.com> 1765812558 +0530	commit: new keymaps
+31701259d46371c36bdb6919ab34c6ea9a88b93b 168dc43f3c379fa11aa9374382ea02c528557148 praveenscript <praveenkumarjkr@gmail.com> 1765812567 +0530	commit: improved
+168dc43f3c379fa11aa9374382ea02c528557148 e2526e30727d2d85706c490b350f9fa9fc1a9b95 praveenscript <praveenkumarjkr@gmail.com> 1765812591 +0530	commit: improved
+e2526e30727d2d85706c490b350f9fa9fc1a9b95 96ecbf4985f931366e6702fef20d54c710094280 praveenscript <praveenkumarjkr@gmail.com> 1765812609 +0530	commit: removed bufferline
+96ecbf4985f931366e6702fef20d54c710094280 561e4fa9b60ba9f4719679f8ea9192bc3bdc4f4b praveenscript <praveenkumarjkr@gmail.com> 1765812622 +0530	commit: removed ft, and event
+561e4fa9b60ba9f4719679f8ea9192bc3bdc4f4b 4dec60abaf12395c444caa0822712f869177b041 praveenscript <praveenkumarjkr@gmail.com> 1765812645 +0530	commit: enabled lazygit, rename
+4dec60abaf12395c444caa0822712f869177b041 b70d82566f39a69014902acfa746127201b8fa95 praveenscript <praveenkumarjkr@gmail.com> 1767945641 +0530	commit: not functional of now
+b70d82566f39a69014902acfa746127201b8fa95 950b59ab10e1cd912629c98b1766ca1568ea64a5 praveenscript <praveenkumarjkr@gmail.com> 1767945675 +0530	commit: added highlight on yank
+950b59ab10e1cd912629c98b1766ca1568ea64a5 467bf0e61423259562e486dd51a503aaefe54248 praveenscript <praveenkumarjkr@gmail.com> 1767945690 +0530	commit: case conversion btw python and js
+467bf0e61423259562e486dd51a503aaefe54248 ac5190c8666644b7ea63c1f339224ed5363e9305 praveenscript <praveenkumarjkr@gmail.com> 1767945720 +0530	commit: dynamic comment snippet
+ac5190c8666644b7ea63c1f339224ed5363e9305 04b702613f834b5a9eb80be09503e627b72554ea praveenscript <praveenkumarjkr@gmail.com> 1767945739 +0530	commit: added js in it
+04b702613f834b5a9eb80be09503e627b72554ea 521aae51d71d2f4c6986a61d7b03e528b143c2e0 praveenscript <praveenkumarjkr@gmail.com> 1767945755 +0530	commit: several new keymaps
+521aae51d71d2f4c6986a61d7b03e528b143c2e0 25b362fcf7500cbf70037d4859ccc69d7227948f praveenscript <praveenkumarjkr@gmail.com> 1767945773 +0530	commit: improved
+25b362fcf7500cbf70037d4859ccc69d7227948f 33d724c4787d18141b1419acc7bd6a3c0e09e3ea praveenscript <praveenkumarjkr@gmail.com> 1767945796 +0530	commit: ...
+33d724c4787d18141b1419acc7bd6a3c0e09e3ea 46cc2442d6784c6c5f24dd969bdddf1056f0f286 praveenscript <praveenkumarjkr@gmail.com> 1767945815 +0530	commit: new picker using es
+46cc2442d6784c6c5f24dd969bdddf1056f0f286 7465f3a0270f97a33cf4599bf12136f26534cc7f praveenscript <praveenkumarjkr@gmail.com> 1767945829 +0530	commit: improvements
+7465f3a0270f97a33cf4599bf12136f26534cc7f f327f3c3a1d2204013fc41dd7766bbf32f55d20b praveenscript <praveenkumarjkr@gmail.com> 1767945847 +0530	commit: removed ; trigger for snippets
+f327f3c3a1d2204013fc41dd7766bbf32f55d20b 47f41f5c6451ecae423eb907ffe3d8e62e6654e7 praveenscript <praveenkumarjkr@gmail.com> 1767945856 +0530	commit: added several plugins
+47f41f5c6451ecae423eb907ffe3d8e62e6654e7 c401b204e308f20ea47b6de5e431bf47ceec9533 praveenscript <praveenkumarjkr@gmail.com> 1767945891 +0530	commit: fixed jsregexp windows installation
+c401b204e308f20ea47b6de5e431bf47ceec9533 6e669cb8d4cddb391f928b6af75cb939edffeba7 praveenscript <praveenkumarjkr@gmail.com> 1767945906 +0530	commit: removed ys as it ruined y
+6e669cb8d4cddb391f928b6af75cb939edffeba7 6c5f5b28a64bd6be9b7c978fb4000316c1ec93cd praveenscript <praveenkumarjkr@gmail.com> 1767945928 +0530	commit: new plugin for substitution
+6c5f5b28a64bd6be9b7c978fb4000316c1ec93cd 44f020bb63c986aed52a2cc279184837be60cf6e praveenscript <praveenkumarjkr@gmail.com> 1767945946 +0530	commit: added run for js and python in snacks scratch
+44f020bb63c986aed52a2cc279184837be60cf6e 6bd0d626db1feae4f1d6c030efc7a8d9872fb02f praveenscript <praveenkumarjkr@gmail.com> 1767945958 +0530	commit: new plugins
+6bd0d626db1feae4f1d6c030efc7a8d9872fb02f 80dde9b159ff9836d04d15dc9553c038e09d24e8 praveenscript <praveenkumarjkr@gmail.com> 1767945968 +0530	commit: testing custom snippets
+80dde9b159ff9836d04d15dc9553c038e09d24e8 073543b74bc1c914c16deba15fb530c375432937 praveenscript <praveenkumarjkr@gmail.com> 1767945975 +0530	commit: testing custom snippets
+073543b74bc1c914c16deba15fb530c375432937 d442fdccbc967a33b776c9305ccbfbe749f0f90b praveenscript <praveenkumarjkr@gmail.com> 1767945997 +0530	commit: ...
+d442fdccbc967a33b776c9305ccbfbe749f0f90b 289187eecacba758d54f28dda978db7a4a6d8839 praveenscript <praveenkumarjkr@gmail.com> 1767974335 +0530	commit: python autocmd to not focus on hover
+289187eecacba758d54f28dda978db7a4a6d8839 0f3d7a31d92d4718c9676acb7a4305aaf02e44ac praveenscript <praveenkumarjkr@gmail.com> 1767974376 +0530	commit: lsp hover fix for python
+0f3d7a31d92d4718c9676acb7a4305aaf02e44ac 870c8d2bafcb77e5ed8f97174cc649892c6593f7 praveenscript <praveenkumarjkr@gmail.com> 1767974391 +0530	commit: added basedpyright
+870c8d2bafcb77e5ed8f97174cc649892c6593f7 aa1264739691763d5f4c97d8ef338f1472e7f0b4 praveenscript <praveenkumarjkr@gmail.com> 1768740781 +0530	commit: a floating buffer
+aa1264739691763d5f4c97d8ef338f1472e7f0b4 aa6115126f235bbbfecfe7c2ef0b69c02b9fa30b praveenscript <praveenkumarjkr@gmail.com> 1768740809 +0530	commit: added more fns such as yank path
+aa6115126f235bbbfecfe7c2ef0b69c02b9fa30b 66e21d74e4b171223860f8363653b907540ce6b7 praveenscript <praveenkumarjkr@gmail.com> 1768740824 +0530	commit: added default config
+66e21d74e4b171223860f8363653b907540ce6b7 4d04b77739a567092b3c9a4a27137a2aa9686ad9 praveenscript <praveenkumarjkr@gmail.com> 1768740851 +0530	commit: removed jedi from ensure installed
+4d04b77739a567092b3c9a4a27137a2aa9686ad9 ed0a9d66b4f65989a07f6e554806b281e4de61ef praveenscript <praveenkumarjkr@gmail.com> 1768740870 +0530	commit: fixed installation of mini align/splitjoin
+ed0a9d66b4f65989a07f6e554806b281e4de61ef 3030d4cfa9d3b87d106a1014dc80f24381e39379 praveenscript <praveenkumarjkr@gmail.com> 1768740883 +0530	commit: new plugin for checking the usage of symbols
+3030d4cfa9d3b87d106a1014dc80f24381e39379 389b90aacb348e76f3fc524e51b2f7149e190a84 praveenscript <praveenkumarjkr@gmail.com> 1768740902 +0530	commit: new plugin todo-comments
+389b90aacb348e76f3fc524e51b2f7149e190a84 211700e72884363f2cb3c8c1154cb1977bef1c4a praveenscript <praveenkumarjkr@gmail.com> 1768740921 +0530	commit: km keymap snippet
+211700e72884363f2cb3c8c1154cb1977bef1c4a d5f9eda8b2254906bf92606dc9a7dd161e149299 praveenscript <praveenkumarjkr@gmail.com> 1768740933 +0530	commit: some python snippets
+d5f9eda8b2254906bf92606dc9a7dd161e149299 aa084e295dea664c8f52fb5e7bc7a9896a43aba7 praveenscript <praveenkumarjkr@gmail.com> 1768740977 +0530	commit: cycling btw float windows
+aa084e295dea664c8f52fb5e7bc7a9896a43aba7 4720d79a11dfc4b9964c8c426411315052e74847 praveenscript <praveenkumarjkr@gmail.com> 1768741015 +0530	commit: fixed comment converter fn not working
+4720d79a11dfc4b9964c8c426411315052e74847 79009abe30f03c90edca25ec04e83b5cf386b178 praveenscript <praveenkumarjkr@gmail.com> 1768887247 +0530	commit: added auto commit this is test though
+79009abe30f03c90edca25ec04e83b5cf386b178 6a21bd1fe132e5294ef7797b78939caf00cafeb2 praveenscript <praveenkumarjkr@gmail.com> 1768888215 +0530	commit: implementation doesn't work for py lsp so made it to use type definition
+6a21bd1fe132e5294ef7797b78939caf00cafeb2 22b3d2ae0dd8220523ecc66e1f8de04506056bd2 praveenscript <praveenkumarjkr@gmail.com> 1768892192 +0530	commit: added some lsp keymaps
+22b3d2ae0dd8220523ecc66e1f8de04506056bd2 86ae5f74e72d85c4f37c9295f1c3e296fbe5a48d praveenscript <praveenkumarjkr@gmail.com> 1768892856 +0530	commit: symbol usage plugin keymap
+86ae5f74e72d85c4f37c9295f1c3e296fbe5a48d de043fadf4c7806125758485248935fcbd98d1d1 praveenscript <praveenkumarjkr@gmail.com> 1768897481 +0530	commit: updated fT to ft, changed cwd to the parent's folder of file
+de043fadf4c7806125758485248935fcbd98d1d1 14fb232a7912d24686cae4c239319ae6d0196435 praveenscript <praveenkumarjkr@gmail.com> 1768897621 +0530	commit: Updated Module name
+14fb232a7912d24686cae4c239319ae6d0196435 08cc22088db671e2faa9765b136bc4c8e756abca praveenscript <praveenkumarjkr@gmail.com> 1768897698 +0530	commit: updated this keymap, now it works for all buffers ig
+08cc22088db671e2faa9765b136bc4c8e756abca 8f7e4b6ed11a45882c33a7ecb46d0e88e13742b8 praveenscript <praveenkumarjkr@gmail.com> 1768897979 +0530	commit: added some highlight group
+8f7e4b6ed11a45882c33a7ecb46d0e88e13742b8 873fced026d35f3db3a30076e00d4c94843d3454 praveenscript <praveenkumarjkr@gmail.com> 1768898024 +0530	commit: fn to highlight a word broken lol
+873fced026d35f3db3a30076e00d4c94843d3454 83b8112798ec1db6ee3075cce9cd00cbd66db7c2 praveenscript <praveenkumarjkr@gmail.com> 1768898122 +0530	commit: refractored
+83b8112798ec1db6ee3075cce9cd00cbd66db7c2 47ff8df928c306c46ae076e98c4e8683dbca9b58 praveenscript <praveenkumarjkr@gmail.com> 1768898168 +0530	commit: updated the keymap as ts used by toggle symbol
+47ff8df928c306c46ae076e98c4e8683dbca9b58 4cf9743c0bd374df12ed32c71ff0909f56975f4d praveenscript <praveenkumarjkr@gmail.com> 1768898295 +0530	commit: updated gt and gT to auto create tab if not exist
+4cf9743c0bd374df12ed32c71ff0909f56975f4d 2f81a1fb8fbfa639c54d2d170ac07746da55d718 praveenscript <praveenkumarjkr@gmail.com> 1768898341 +0530	commit: toggle for split
+2f81a1fb8fbfa639c54d2d170ac07746da55d718 d70b31d0ce1133db343744ea06b7ce7071ce8e75 praveenscript <praveenkumarjkr@gmail.com> 1768898365 +0530	commit: enhanced gt and gT
+d70b31d0ce1133db343744ea06b7ce7071ce8e75 ae7076da7dde6eecb24afe6b27d1e1388c8bb686 praveenscript <praveenkumarjkr@gmail.com> 1768898416 +0530	commit: weird keymap to jump to self, init in class
+ae7076da7dde6eecb24afe6b27d1e1388c8bb686 70c0a33c92abece34157a7cb9a4ad5719578b18a praveenscript <praveenkumarjkr@gmail.com> 1768898442 +0530	commit: kills everything and quit not tested though
+70c0a33c92abece34157a7cb9a4ad5719578b18a 5d0fd3e06eb6cc2108afb113f4fc12c9d1f371b1 praveenscript <praveenkumarjkr@gmail.com> 1768898546 +0530	commit: cmd for stopping lsp
+5d0fd3e06eb6cc2108afb113f4fc12c9d1f371b1 778d90830cf3554e91434e685921d6ed5a34b579 praveenscript <praveenkumarjkr@gmail.com> 1768898574 +0530	commit: weird keymap to run scripts at once
+778d90830cf3554e91434e685921d6ed5a34b579 f382b0e462f92ef61189d9110dadf8d58454d700 praveenscript <praveenkumarjkr@gmail.com> 1768898653 +0530	commit: removed
+f382b0e462f92ef61189d9110dadf8d58454d700 53be8c63b41bdcbb2760928152be1c3e74b03905 praveenscript <praveenkumarjkr@gmail.com> 1768898691 +0530	commit: some improvements
+53be8c63b41bdcbb2760928152be1c3e74b03905 c8f1e11585295ab4ea59b5b3f625adaed5e56d67 praveenscript <praveenkumarjkr@gmail.com> 1768898719 +0530	commit: doesn't work at least for now
+c8f1e11585295ab4ea59b5b3f625adaed5e56d67 827acc8e21b6fa20fdef6952c09d0fd40b612de2 praveenscript <praveenkumarjkr@gmail.com> 1768898786 +0530	commit: added todo, symbol-usage
+827acc8e21b6fa20fdef6952c09d0fd40b612de2 096c1a9e090a21f811b618c9b44f1c3cebe5cd84 praveenscript <praveenkumarjkr@gmail.com> 1768898802 +0530	commit: improvements
+096c1a9e090a21f811b618c9b44f1c3cebe5cd84 4efb9d7ae6e83453e03ca98e5edaac00f0a6345a praveenscript <praveenkumarjkr@gmail.com> 1768898823 +0530	commit: floating win
+4efb9d7ae6e83453e03ca98e5edaac00f0a6345a 67133993fc7124fcc9b8f2da99169ba7ecd38fd6 praveenscript <praveenkumarjkr@gmail.com> 1768898848 +0530	commit: automating commits
+67133993fc7124fcc9b8f2da99169ba7ecd38fd6 5d875798011b5f4e90b07801a089d7c609e7bc5b praveenscript <praveenkumarjkr@gmail.com> 1768898874 +0530	commit: previous implementation of git-fn
+5d875798011b5f4e90b07801a089d7c609e7bc5b 0e430b4964ecbed5df855f6675eae47e5a00d753 praveenscript <praveenkumarjkr@gmail.com> 1768898896 +0530	commit: imported more modules
+0e430b4964ecbed5df855f6675eae47e5a00d753 3c54970201615de2802b1cc2280384047bc2ef69 praveenscript <praveenkumarjkr@gmail.com> 1769522926 +0530	commit: updated gitignore
+3c54970201615de2802b1cc2280384047bc2ef69 732f17e8a520574f4ddc40460d0f757d5b2dbb2a praveenscript <praveenkumarjkr@gmail.com> 1769526340 +0530	commit: added a keymap for markdown to check the checklist
+732f17e8a520574f4ddc40460d0f757d5b2dbb2a 605c11fd71de42b59d191ecad5d66d10fccb53f3 praveenscript <praveenkumarjkr@gmail.com> 1769527843 +0530	commit: added a new utility fn
+605c11fd71de42b59d191ecad5d66d10fccb53f3 a8abbf6958a47f6b13a5f20054c7e9074f1706ec praveenscript <praveenkumarjkr@gmail.com> 1769527858 +0530	commit: just for rough work
+a8abbf6958a47f6b13a5f20054c7e9074f1706ec 4534dfbcfcfe6c5b1aadf0570d3753849e34c99d praveenscript <praveenkumarjkr@gmail.com> 1769527932 +0530	commit: switch to focus.nvim
+4534dfbcfcfe6c5b1aadf0570d3753849e34c99d 5460b8ef129f77368881066c97695c3a0c0b2822 praveenscript <praveenkumarjkr@gmail.com> 1769527948 +0530	commit: removed useless roughboard with new one
+5460b8ef129f77368881066c97695c3a0c0b2822 f2be59703c5ce7bb8249f9b20419f47a8bbdb951 praveenscript <praveenkumarjkr@gmail.com> 1769528030 +0530	commit: updated so it'll cycle with listed= true buffer
+f2be59703c5ce7bb8249f9b20419f47a8bbdb951 51f89bc866bf6543ddcc6f9a6914c28e1d1958bf praveenscript <praveenkumarjkr@gmail.com> 1769572374 +0530	commit: replaced mine config to focus.nvim to move
+51f89bc866bf6543ddcc6f9a6914c28e1d1958bf f966f51162dde552d46f544f02930b76edf270e7 praveenscript <praveenkumarjkr@gmail.com> 1769572439 +0530	commit: disabled suggested keymaps focus.nvim
+f966f51162dde552d46f544f02930b76edf270e7 38439495ad00c06375de628b3269799b0d583d7f praveenscript <praveenkumarjkr@gmail.com> 1769760196 +0530	commit: fixed buffer not opening in correct window
+38439495ad00c06375de628b3269799b0d583d7f c994a1f5c5b8376fb5ea50db33b4b188343a0b55 praveenscript <praveenkumarjkr@gmail.com> 1770213817 +0530	commit: it greps from module, thought it would be useful but ah uh I can't read code
+c994a1f5c5b8376fb5ea50db33b4b188343a0b55 364f9b188a39c30d8121064ffcf1bb62236873d3 praveenscript <praveenkumarjkr@gmail.com> 1770213982 +0530	commit: added fns to add path to clearify reports more with file's path
+364f9b188a39c30d8121064ffcf1bb62236873d3 2754d7d95f7a522df51c4beb71d11bd88cee5375 praveenscript <praveenkumarjkr@gmail.com> 1770214050 +0530	commit: removed mini pairs
+2754d7d95f7a522df51c4beb71d11bd88cee5375 9236b4de664e3384fd53230e741a44053bec8a5d praveenscript <praveenkumarjkr@gmail.com> 1775531543 +0530	commit: few keymaps
+9236b4de664e3384fd53230e741a44053bec8a5d 0ff829acb1a173ea607259d64b846a4173dc603b praveenscript <praveenkumarjkr@gmail.com> 1775531626 +0530	commit: search and replace docs
+0ff829acb1a173ea607259d64b846a4173dc603b b1ec28836d97cbb2be63177537216a6f9f17b4ad praveenscript <praveenkumarjkr@gmail.com> 1775531717 +0530	commit: few improvements
+b1ec28836d97cbb2be63177537216a6f9f17b4ad cfc015ab25ef931864126cd5a1fb7db265d37eb6 praveenscript <praveenkumarjkr@gmail.com> 1775531757 +0530	commit: improved and change run to ru
+cfc015ab25ef931864126cd5a1fb7db265d37eb6 f544a4859999d88c0d977e68cf5b535ccf0e3737 praveenscript <praveenkumarjkr@gmail.com> 1775531802 +0530	commit: few additional keymaps
+f544a4859999d88c0d977e68cf5b535ccf0e3737 ad634d6aa5ebaffa2d6be0920a181ba04b73689a praveenscript <praveenkumarjkr@gmail.com> 1775531813 +0530	commit: updated resize logic
+ad634d6aa5ebaffa2d6be0920a181ba04b73689a 07c3b7444a898acd15c067bfe447c5b3020d8364 praveenscript <praveenkumarjkr@gmail.com> 1775531853 +0530	commit: new plugins
+07c3b7444a898acd15c067bfe447c5b3020d8364 f9d25bb7c8ef75c01301c67858adf49021152359 praveenscript <praveenkumarjkr@gmail.com> 1775531867 +0530	commit: fixed grugfarwithin
+f9d25bb7c8ef75c01301c67858adf49021152359 84fd14869a98638e4957d8791e6284e24c3320ea praveenscript <praveenkumarjkr@gmail.com> 1775531891 +0530	commit: updates

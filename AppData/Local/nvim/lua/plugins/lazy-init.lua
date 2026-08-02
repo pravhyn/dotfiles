@@ -1,0 +1,121 @@
+-- ~/.config/nvim/lua/plugins/init.lua
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+        vim.fn.system({
+                "git",
+                "clone",
+                "--filter=blob:none",
+                "https://github.com/folke/lazy.nvim.git",
+                "--branch=stable",
+                lazypath,
+        })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+        -- My Own Plugins LOl
+        { import = "plugins.idleCLock" },
+
+        { import = "plugins.splits" },
+        -- List your plugins here, or require separate files
+        -- For WebCodeBases
+        { import = "plugins.meow-yarn" },
+        -- { import = "plugins.arrow-navigation" },
+        -- For webDevelopment
+        { import = "plugins.nvim-html-css" },
+        { import = "plugins.autoclose-tag" },
+        -- { import = "plugins.telescope" },
+        -- {import = "plugins.rustaceanvim"},
+        { import = "plugins.whichKey" },
+        { import = "plugins.nvumi" },
+        { import = "plugins.conform" },
+        -- For Speed
+        -- { import = "plugins.luaSnip" },
+
+        { import = "plugins.neogen" },
+        { import = "plugins.fzf" },
+        -- {import = "plugins.inputSnacks"},
+        { import = "plugins.lazyGit" },
+        -- Text manipulations
+        { import = "plugins.vim-visual-multi" },
+        -- { import = "plugins.comment" },
+        { import = "plugins.alternate-toggle" },
+        -- { import = "plugins.autoclose" },
+        { import = "plugins.auto-pairs" },
+        -- { import = "plugins.haunt" },
+        -- { import = "plugins.refractor" },
+        { import = "plugins.vim-dadbod" },
+        -- { import = "plugins.nvim-surround" },
+        -- { import = "plugins.telescope-browser" },
+        { import = "plugins.autoclose" },
+        -- { import = "plugins.telescope-fzf-native" },
+        { import = "plugins.treesitter" },
+        -- Add other plugins...
+        -- { import = "plugins.persistence" },
+        { import = "plugins.oil" },
+        -- { import = "plugins.catppuccin"},
+        -- { import = "dashboard.dashboard" },
+        { import = "plugins.snacks" },
+        { import = "plugins.trouble" },
+        { import = "plugins.nvim-bqf" },
+        -- { import = "plugins.notify" },
+        -- For LSP Managements
+        { import = "plugins.lspconfig" },
+        { import = "plugins.csharplsp" },
+        -- For Debuggers
+        { import = "plugins.debugger" },
+        { import = "plugins.webdevicons" },
+        { import = "plugins.rosepinemoon" },
+        { import = "plugins.toggleterm" },
+        { import = "plugins.runner" },
+
+        { import = "plugins.neotest" },
+        -- { import = "plugins.lspSignature" },
+        { import = "plugins.dev" },
+        { import = "plugins.rainbow" },
+        -- { import = "plugins.tabout" },
+        -- { import = "plugins.neogit" },
+        -- decorations
+        { import = "plugins.lualine" },
+        { import = "plugins.nvim-colorizer" },
+        -- { import = "plugins.lspSignature" },
+        { import = "plugins.dev" },
+        -- { import = "plugins.tabout" },
+        { import = "plugins.mini-suite" },
+        -- { import = "plugins.neogit" },
+        { import = "plugins.lualine" },
+        { import = "plugins.treesitter-textObjects" },
+        { import = "plugins.treesitter-context" },
+        -- { import = "plugins.bufferline" },
+        { import = "plugins.mini-line" },
+        -- Navigations
+        { import = "plugins.before" },
+        { import = "plugins.flash" },
+        { import = "plugins.todo" },
+
+        { import = "plugins.gitsigns" },
+        { import = "plugins.symbol-usage" },
+        { import = "plugins.import" },
+        -- { import = "plugins.precognition" },
+        -- { import = "plugins.helpers_plugin"}
+        { import = "plugins.text-objets" },
+        -- { import = "plugins.nvim-rip-substitute" },
+        { import = "plugins.emmet-vim" },
+
+        -- { import = "plugins.indent-blankline" },
+        -- { import = "plugins.none" },
+        { import = "plugins.diffview" },
+        { import = "plugins.cmd" },
+        { import = "plugins.grug-far" },
+        { import = "plugins.obsidian" },
+        -- { import = "plugins.nvim-spectre" },
+        { import = "plugins.nvim-dbview" },
+
+        -- Mini plugins
+        { import = "plugins.lazydev" },
+        { import = "plugins.cmp" },
+})
+
+-- color Scheme catppuccin
+-- vim.cmd.colorscheme("catppuccin-mocha") -- or "catppuccin-mocha", "catppuccin-frappe", etc.

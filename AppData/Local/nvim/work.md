@@ -1,0 +1,6 @@
+- [x] Fix cycle cloat <leader>zf should work on only listed buffer
+- [x] Make roughboard retain the buffer instead of closing it
+- [x] make python interpreter selector
+- [ ] make a config file for project for remembering settings such as python interpreter?
+- [ ] create a floating terminal that can manage many terminal sessions
+- [ ] create a wezterm terminal that can control terminal cmds etc

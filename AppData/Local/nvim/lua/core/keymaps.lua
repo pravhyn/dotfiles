@@ -1,0 +1,635 @@
+-- ~/.config/nvim/lua/core/keymaps.lua
+-- vim.keymap.set("n", "<leader>rq", '"_ci"<C-r>0<Esc>', { desc = "Replace inside quotes" })
+-- vim.keymap.set("n", "<leader>rp", '"_ci(<C-r>0<Esc>', { desc = "Replace inside ()" })
+-- vim.keymap.set("n", "<leader>rb", '"_ci{<C-r>0<Esc>', { desc = "Replace inside {}" })
+-- vim.keymap.set("n", "<leader>rs", '"_ci[<C-r>0<Esc>', { desc = "Replace inside []" })
+-- vim.keymap.set("n", "<leader>ra", '"_ci<<C-r>0<Esc>', { desc = "Replace inside <>" })
+-- vim.keymap.set("n", "<leader>rl", '"_cc<C-r>0<Esc>', { desc = "Replace line" })
+
+-- -- single quotes
+-- vim.keymap.set("n", "<leader>r'", "\"_ci'<C-r>0<Esc>")
+--
+-- -- backticks
+-- vim.keymap.set("n", "<leader>r`", '"_ci`<C-r>0<Esc>')
+--
+-- -- word
+-- vim.keymap.set("n", "<leader>rw", '"_ciw<C-r>0<Esc>')
+--
+-- -- paragraph
+-- vim.keymap.set("n", "<leader>rP", '"_cip<C-r>0<Esc>')
+-- Obsidian Keymaps
+
+vim.keymap.set("n", "gp", function()
+        local reg = vim.fn.getreg('"')
+        local typ = vim.fn.getregtype('"')
+
+        vim.fn.setreg('"', reg, "v")
+        vim.cmd("normal! p")
+        vim.fn.setreg('"', reg, typ)
+end)
+
+-- TODO: Fix Path issue as linux type path issue is most stable
+vim.api.nvim_create_user_command("RevealFile", function()
+        local file = vim.fn.system({ "cygpath", "-w", vim.fn.expand("%:p") }):gsub("\n", "")
+        os.execute('explorer.exe /select,"' .. file .. '"')
+
+        -- vim.cmd('silent !explorer.exe /select,"' .. file .. '"')
+end, {
+        desc = "Reveal current file in File Explorer",
+})
+
+vim.keymap.set("n", "<leader>oc", function()
+        vim.cmd("Obsidian new_from_template")
+end, { desc = "Obsidian: New Note From buffer's Current language" })
+
+vim.keymap.set("n", "<leader>oC", function()
+        vim.cmd("Obsidian new")
+end, { desc = "Obsidian: Create new note (API)" })
+vim.keymap.set("n", "<leader>ob", function()
+        vim.cmd("Obsidian quick_switch")
+end, { desc = "Obsidian: quick_switch" })
+
+vim.keymap.set("n", "<leader>og", function()
+        vim.cmd("Obsidian search")
+end, { desc = "Obsidian:  Search Notes" })
+
+Snacks.keymap.set("n", "<leader>tt", function()
+        local line = vim.api.nvim_get_current_line()
+
+        if line:match("%[ %]") then
+                line = line:gsub("%[ %]", "[x]", 1)
+        elseif line:match("%[x%]") then
+                line = line:gsub("%[x%]", "[ ]", 1)
+        else
+                return
+        end
+
+        vim.api.nvim_set_current_line(line)
+end, { ft = { "markdown" }, desc = "markdown: check" })
+
+-- better up/down
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+
+-- vim.keymap.set("n", "<leader>ug", function()
+--         local win = vim.api.nvim_get_current_win()
+--
+--         local number = vim.wo[win].number
+--         local relativenumber = vim.wo[win].relativenumber
+--         local signcolumn = vim.wo[win].signcolumn
+--
+--         if number or relativenumber or signcolumn ~= "no" then
+--                 vim.wo[win].number = false
+--                 vim.wo[win].relativenumber = false
+--                 vim.wo[win].signcolumn = "no"
+--         else
+--                 vim.wo[win].number = true
+--                 vim.wo[win].relativenumber = true
+--                 vim.wo[win].signcolumn = "yes"
+--         end
+-- end, { desc = "Toggle gutter (numbers + signs)" })
+
+vim.keymap.set("n", "<leader>ug", function()
+        local wins = vim.api.nvim_list_wins()
+
+        -- decide toggle state from current window
+        local cur = vim.api.nvim_get_current_win()
+        local enable = not (vim.wo[cur].number or vim.wo[cur].relativenumber or vim.wo[cur].signcolumn ~= "no")
+
+        for _, win in ipairs(wins) do
+                vim.wo[win].number = enable
+                vim.wo[win].relativenumber = enable
+                vim.wo[win].signcolumn = enable and "yes" or "no"
+        end
+end, { desc = "Toggle gutter (all windows)" })
+
+-- buffers
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+-- vim.keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+vim.keymap.set("n", "<leader>bd", function()
+        Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>bo", function()
+        Snacks.bufdelete.other()
+end, { desc = "Delete Other Buffers" })
+vim.keymap.set("n", "<leader>D", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
+
+-- save file
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
+-- location list
+vim.keymap.set("n", "<leader>xl", function()
+        local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
+        if not success and err then
+                vim.notify(err, vim.log.levels.ERROR)
+        end
+end, { desc = "Location List" })
+
+-- quickfix list
+vim.keymap.set("n", "<leader>xq", function()
+        local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
+        if not success and err then
+                vim.notify(err, vim.log.levels.ERROR)
+        end
+end, { desc = "Quickfix List" })
+
+vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
+vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
+
+local function project_root()
+        local root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+        if root and root ~= "" then
+                return root
+        end
+        return vim.loop.cwd()
+end
+
+local function current_file_parent()
+        local bufname = vim.api.nvim_buf_get_name(0)
+        if bufname == "" then
+                return vim.loop.cwd() -- fallback if buffer has no file
+        end
+        return vim.fn.fnamemodify(bufname, ":h")
+end
+
+-- floating terminal
+-- vim.keymap.set("n", "<leader>ft", function()
+--         Snacks.terminal()
+-- end, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<leader>ft", function()
+        Snacks.terminal(nil, { cwd = current_file_parent() })
+end, { desc = "Terminal (Root Dir)" })
+
+vim.keymap.set({ "n", "t" }, "<c-/>", function()
+        Snacks.terminal(nil, { cwd = project_root() })
+end, { desc = "Terminal (Root Dir)" })
+vim.keymap.set({ "n", "t" }, "<c-_>", function()
+        Snacks.terminal(nil, { cwd = project_root() })
+end, { desc = "which_key_ignore" })
+
+vim.keymap.set("n", "<leader>on", "<CMD>Nvumi<CR>", { desc = "[O]pen [N]vumi" })
+
+-- Runner keymaps
+vim.keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>rft", ":RunFile tab<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>rp", ":RunProject<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>rc", ":RunClose<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
+
+-- lua
+-- vim.keymap.set({ "n", "x" }, "<localleader>rc", function()
+--         Snacks.debug.run()
+-- end, { desc = "Run Lua", ft = "lua" })
+
+-- ================================
+-- Duplicate like VS Code (Alt+Shift)
+-- ================================
+
+-- =====================================
+-- Duplicate with Alt+Shift+hjkl (Clean)
+-- =====================================
+
+-- NORMAL MODE
+vim.keymap.set("n", "<A-S-j>", "yyp", { noremap = true, silent = true }) -- down
+vim.keymap.set("n", "<A-S-k>", "yyP", { noremap = true, silent = true }) -- up
+
+-- VISUAL MODE
+vim.keymap.set("v", "<A-S-j>", ":t'>+1<CR>gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<A-S-k>", ":t'<-1<CR>gv", { noremap = true, silent = true })
+
+-- ============================================
+-- Horizontal Duplicate (Alt+Shift+h / l)
+-- Word & Visual Selection with auto-space
+-- ============================================
+
+-- NORMAL MODE: duplicate word under cursor
+
+-- Duplicate to the RIGHT
+vim.keymap.set("n", "<A-S-l>", function()
+        local word = vim.fn.expand("<cword>")
+        if word == "" then
+                return
+        end
+        vim.cmd("normal! e")
+        vim.api.nvim_put({ " " .. word }, "c", true, true)
+end, { noremap = true, silent = true })
+
+-- Duplicate to the LEFT
+vim.keymap.set("n", "<A-S-h>", function()
+        local word = vim.fn.expand("<cword>")
+        if word == "" then
+                return
+        end
+        vim.cmd("normal! b")
+        vim.api.nvim_put({ word .. " " }, "c", false, true)
+end, { noremap = true, silent = true })
+
+-- VISUAL MODE: duplicate exact selection
+
+-- Duplicate selection to the RIGHT
+vim.keymap.set("v", "<A-S-l>", function()
+        local text = table.concat(vim.fn.getregion(vim.fn.getpos("'<"), vim.fn.getpos("'>")), "\n")
+        vim.cmd("normal! `>a ")
+        vim.api.nvim_put({ text }, "c", true, true)
+end, { noremap = true, silent = true })
+
+-- Duplicate selection to the LEFT
+vim.keymap.set("v", "<A-S-h>", function()
+        local text = table.concat(vim.fn.getregion(vim.fn.getpos("'<"), vim.fn.getpos("'>")), "\n")
+        vim.cmd("normal! `<i")
+        vim.api.nvim_put({ text .. " " }, "c", false, true)
+end, { noremap = true, silent = true })
+
+-- source lua file
+vim.keymap.set("n", "<leader>ls", function()
+        -- checks if buffer is modified, if it is then write it
+        local buf = vim.api.nvim_get_current_buf()
+        local is_modified = vim.api.nvim_get_option_value("modified", { buf = buf })
+
+        if is_modified == true then
+                vim.cmd("w")
+        end
+        vim.cmd("luafile " .. vim.fn.expand("%"))
+        vim.notify("loaded")
+end, { desc = "Source current Lua file" })
+
+-- -- live liveserver
+-- vim.keymap.set("n", "<leader>lss", ":!live-server .<CR>", { desc = "Start live-server" })
+
+-- LSP
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename" })
+vim.keymap.set("v", "<leader>la", vim.lsp.buf.code_action, { desc = "LSP Action" })
+vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { desc = "LSP implementation" })
+vim.keymap.set("n", "lr", vim.lsp.buf.references, { desc = "LSP refrence" })
+vim.keymap.set("n", "lt", vim.lsp.buf.type_definition, { desc = "LSP type_definition" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
+        desc = "Go to definition",
+})
+
+vim.keymap.set("n", "<leader>ts", function()
+        require("symbol-usage").toggle()
+end, { desc = "Description" })
+
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = true })
+
+local function smart_python_hover()
+        local clients = vim.lsp.get_clients({ bufnr = 0 })
+
+        for _, client in ipairs(clients) do
+                if client.name == "jedi_language_server" then
+                        vim.lsp.buf.hover({
+                                filter = function(c)
+                                        return c.name == "jedi_language_server"
+                                end,
+                        })
+                        return
+                end
+        end
+
+        -- fallback to pyright
+        vim.lsp.buf.hover({
+                filter = function(c)
+                        return c.name == "basedpyright"
+                end,
+        })
+end
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--         pattern = "python",
+--         callback = function(ev)
+--                 vim.keymap.set("n", "K", smart_python_hover, { buffer = ev.buf })
+--         end,
+-- })
+
+Snacks.keymap.set("n", "K", smart_python_hover, { ft = { "python" }, desc = "python hover" })
+Snacks.keymap.set(
+        "n",
+        "<leader>gI",
+        vim.lsp.buf.type_definition,
+        { ft = { "python" }, desc = "Pyright: Go to implementation" }
+)
+
+-- local function jedi_hover()
+--         vim.lsp.buf.hover({
+--                 filter = function(client)
+--                         return client.name == "jedi_language_server"
+--                 end,
+--         })
+-- end
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+--         pattern = "python",
+--         callback = function(ev)
+--                 vim.keymap.set("n", "K", jedi_hover, { buffer = ev.buf })
+--         end,
+-- })
+
+-- local function pyright_hover()
+--         vim.lsp.buf.hover({
+--                 filter = function(client)
+--                         return client.name == "basedpyright"
+--                 end,
+--         })
+-- end
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+--         pattern = "python",
+--         callback = function(ev)
+--                 vim.keymap.set("n", "K", pyright_hover, { buffer = ev.buf, silent = true })
+--         end,
+-- })
+
+-- vim.keymap.set("n", "K", function()
+--   local clients = vim.lsp.get_clients({ bufnr = 0 })
+--   if #clients > 0 then
+--     vim.lsp.buf.hover()
+--   else
+--     vim.cmd("normal! K")
+--   end
+-- end, { desc = "Hover (LSP or fallback)" })
+--
+-- smartActions
+
+-- refractor nvim
+vim.keymap.set("v", "<leader>rf", function()
+        require("refactoring").select_refactor()
+end, { desc = "Refactor (select)" })
+-- to read Python docs
+
+vim.keymap.set("n", "<leader>fd", function()
+        Snacks.picker.grep({
+                cwd = vim.fn.expand("~/docs/python-3.14-docs-text"),
+                glob = { "library/**", "reference/**", "tutorial/**" },
+                prompt_title = "Python Docs",
+        })
+end)
+
+-- vim.keymap.set("n", "<leader>fM", function()
+--         Snacks.picker.grep({
+--                 cwd = vim.fn.expand("~/docs/maths"),
+--                 prompt_title = "maths docs",
+--         })
+-- end, { desc = "Maths Docs" })
+
+vim.keymap.set("n", "<leader>fM", function()
+        Snacks.picker.grep({
+                cwd = vim.fn.expand("~/docs/maths"),
+                prompt_title = "Maths PDFs",
+                filetype = { "pdf" },
+
+                -- Custom command:
+                cmd = {
+                        "rg",
+                        "--with-filename",
+                        "--line-number",
+                        "--color=never",
+                        "--no-heading",
+                        "--smart-case",
+                        "-g",
+                        "*.pdf",
+
+                        -- Tell rg to use pdftotext
+                        "--type-add",
+                        "pdf:*.pdf",
+                        "--type",
+                        "pdf",
+                        "--pre",
+                        "pdftotext",
+                        "--pre-glob",
+                        "*.pdf",
+                },
+        })
+end, { desc = "Maths PDFs" })
+
+-- Noetest keymaps
+local neotest = require("neotest")
+
+vim.keymap.set("n", "<leader>tn", function()
+        neotest.run.run() -- run nearest test
+end)
+
+vim.keymap.set("n", "<leader>tf", function()
+        neotest.run.run(vim.fn.expand("%")) -- run current file
+end)
+
+vim.keymap.set("n", "<leader>tss", function()
+        neotest.summary.toggle() -- toggle summary panel
+end)
+
+vim.keymap.set("n", "<leader>to", function()
+        neotest.output.open({ enter = true }) -- open test output
+end)
+
+vim.keymap.set("n", "<leader>tl", function()
+        neotest.run.run_last() -- rerun last test
+end)
+-- To delete buffers
+-- Safe close current buffer
+vim.keymap.set("n", "<leader>qq", function()
+        require("snacks").bufdelete()
+end)
+-- toggleTerm
+-- ToggleTerm Send-to-Terminal Keymaps
+local trim_spaces = true
+local toggleterm = require("toggleterm")
+
+vim.keymap.set("n", "<leader>cd", function()
+        local buf_path = vim.api.nvim_buf_get_name(0)
+        if buf_path == "" then
+                vim.notify("No file path detected", vim.log.levels.WARN)
+                return
+        end
+
+        local dir = vim.fn.fnamemodify(buf_path, ":p:h")
+        local cmd = "cd " .. vim.fn.shellescape(dir)
+
+        -- Send only the cd command to terminal
+        require("toggleterm").send_lines_to_terminal("single_line", true, {
+                lines = { cmd },
+        })
+
+        -- Notify inside Neovim only (not sent to terminal)
+        vim.notify("Sent to terminal: " .. cmd, vim.log.levels.INFO)
+end, { desc = "Send buffer directory as cd to terminal" })
+
+vim.keymap.set("n", "<leader>tp", function()
+        local clipboard = vim.fn.getreg("+")
+        if clipboard and clipboard ~= "" then
+                require("toggleterm").send_lines_to_terminal("single_line", true, {
+                        lines = { clipboard },
+                        args = vim.v.count,
+                })
+        else
+                vim.notify("Clipboard is empty", vim.log.levels.WARN)
+        end
+end, { desc = "Send clipboard text to terminal" })
+-- Visual mode: Send selected lines (choose mode: "single_line", "visual_lines", or "visual_selection")
+vim.keymap.set("v", "<space>s", function()
+        toggleterm.send_lines_to_terminal("visual_selection", trim_spaces, { args = vim.v.count })
+end, { desc = "Send visual selection to terminal" })
+
+-- Operator-pending: Send motion to terminal
+vim.keymap.set("n", "<leader><c-\\>", function()
+        set_opfunc(function(motion_type)
+                toggleterm.send_lines_to_terminal(motion_type, trim_spaces, { args = vim.v.count })
+        end)
+        vim.api.nvim_feedkeys("g@", "n", false)
+end, { desc = "Send motion to terminal" })
+
+-- Normal mode: Send current line to terminal
+vim.keymap.set("n", "<leader><c-\\><c-\\>", function()
+        set_opfunc(function(motion_type)
+                toggleterm.send_lines_to_terminal(motion_type, trim_spaces, { args = vim.v.count })
+        end)
+        vim.api.nvim_feedkeys("g@_", "n", false)
+end, { desc = "Send current line to terminal" })
+
+-- Normal mode: Send entire file to terminal
+vim.keymap.set("n", "<leader><leader><c-\\>", function()
+        set_opfunc(function(motion_type)
+                toggleterm.send_lines_to_terminal(motion_type, trim_spaces, { args = vim.v.count })
+        end)
+        vim.api.nvim_feedkeys("ggg@G''", "n", false)
+end, { desc = "Send entire file to terminal" })
+
+-- command line testing
+-- Lua (init.lua)
+-- lua print(vim.inspect(require("before")))
+vim.keymap.set("v", "<leader>xr", function()
+        local cmd = table.concat(vim.fn.getline("'<", "'>"), "\n")
+        vim.cmd(cmd)
+end, { desc = "Execute selected text as command" })
+
+vim.keymap.set({ "n", "x" }, "<leader>rs", function()
+        require("rip-substitute").sub()
+end, { desc = " rip substitute" })
+
+vim.keymap.set("v", "<leader>jl", function()
+        -- remove newlines
+        vim.cmd("'<,'>s/\\n/ /g")
+        -- collapse multiple spaces into one
+        vim.cmd("'<,'>s/\\s\\+/ /g")
+end, { desc = "Join lines & clean spaces" })
+
+local function tab_next_or_new()
+        if vim.fn.tabpagenr("$") == 1 then
+                vim.cmd("tabnew")
+        else
+                vim.cmd("tabnext")
+        end
+end
+
+local function tab_prev_or_new()
+        if vim.fn.tabpagenr("$") == 1 then
+                vim.cmd("tabnew")
+        else
+                vim.cmd("tabprevious")
+        end
+end
+
+-- Window maximize / restore toggle
+local win_toggle = {
+        saved_layout = nil,
+}
+
+function win_toggle.toggle()
+        if win_toggle.saved_layout then
+                -- Restore previous layout
+                vim.cmd(win_toggle.saved_layout)
+                win_toggle.saved_layout = nil
+        else
+                -- Save current layout and maximize
+                win_toggle.saved_layout = vim.fn.winrestcmd()
+                vim.cmd("only")
+        end
+end
+
+vim.keymap.set("n", "<leader>wm", function()
+        win_toggle.toggle()
+end, { desc = "Toggle maximize window" })
+
+vim.keymap.set("n", "gt", tab_next_or_new, { desc = "Next tab or new tab if only one" })
+vim.keymap.set("n", "gT", tab_prev_or_new, { desc = "Prev tab or new tab if only one" })
+
+vim.keymap.set("n", "<leader>jv", function()
+        -- Save current position
+        local original_pos = vim.api.nvim_win_get_cursor(0)
+
+        -- Search for Python constructor
+        local found = vim.fn.search([[def __init__\s*(]], "W")
+
+        if found == 0 then
+                vim.notify("__init__ not found", vim.log.levels.WARN)
+                vim.api.nvim_win_set_cursor(0, original_pos)
+                return
+        end
+
+        -- Move to first self assignment after __init__
+        local self_found = vim.fn.search([[^\s*self\.\w\+\s*=]], "W")
+
+        if self_found == 0 then
+                -- Stay on __init__ if no assignments found
+                vim.cmd("normal! zz")
+                vim.notify("No self initializers found", vim.log.levels.INFO)
+                return
+        end
+
+        -- Center screen
+        vim.cmd("normal! zz")
+
+        vim.notify("Jumped to initializer block", vim.log.levels.INFO)
+end, { desc = "Jump to class initializers" })
+
+local function kill_everything_and_quit()
+        -- 1. Stop all LSP clients
+        for _, client in pairs(vim.lsp.get_clients()) do
+                client.stop(true)
+        end
+
+        -- 2. Stop all active jobs
+        local jobs = vim.fn.jobwait({}, 0) -- forces job table init
+        for _, job in ipairs(vim.fn.joblist() or {}) do
+                pcall(vim.fn.jobstop, job)
+        end
+
+        -- 3. Delete all terminal buffers (hidden or not)
+        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                if vim.bo[buf].buftype == "terminal" then
+                        pcall(vim.api.nvim_buf_delete, buf, { force = true })
+                end
+        end
+
+        -- 4. Quit everything
+        vim.cmd("wqa")
+end
+
+vim.keymap.set("n", "<leader>qw", kill_everything_and_quit, {
+        desc = "Kill all jobs + LSP + terminals, then wqa",
+})
+
+vim.keymap.set("n", "<leader>zz", function()
+        local config = vim.fn.stdpath("config")
+
+        require("snacks").picker.grep({
+                cwd = config,
+                prompt = "RgConfig ❯ ",
+        })
+end, { desc = "grep nvim config" })
+-- vim.keymap.set("n", "yy", '"0yy', { noremap = true, silent = true })
+-- Lua
+-- vim.keymap.set("n", "x", require("substitute").operator, { noremap = true }) -- like yi{ then xi{
+-- vim.keymap.set("n", "xl", require("substitute").line, { noremap = true }) -- after yanking line, then xl
+-- vim.keymap.set("n", "X", require("substitute").eol, { noremap = true }) -- pastes then removes other stuff till eol
+-- vim.keymap.set("x", "x", require("substitute").visual, { noremap = true }) -- removes the selection, pastes the yank
+--
+-- vim.keymap.set("n", "<leader>x", require("substitute.exchange").operator, { noremap = true })
+-- vim.keymap.set("x", "<leader>x", require("substitute.exchange").visual, { noremap = true })
+-- vim.keymap.set("n", "<leader>X", require("substitute.exchange").line, { noremap = true })

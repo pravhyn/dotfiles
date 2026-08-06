@@ -2,23 +2,9 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local config = wezterm.config_builder()
 
-
-
-
-
-
-
-
-config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", '-NoLogo' }
+-- config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", '-NoLogo' }
 -- config.color_scheme = "Batman"
 config.color_scheme = "Catppuccin Mocha"
-
-
-
-
-
-
-
 
 -- my coolnight colorscheme:
 -- config.colors = {
@@ -34,23 +20,22 @@ config.color_scheme = "Catppuccin Mocha"
 -- }
 
 config.window_background_opacity = 1
--- config.macos_window_background_blur = 10
+config.macos_window_background_blur = 10
 
-config.font = wezterm.font_with_fallback {
+config.font = wezterm.font_with_fallback({
 
-	"Fira Code",
-	"Noto Color Emoji",
-	"Segoe UI Emoji",
-	"JetBrains Mono",
-	"DengXian"
-
-}
-config.font_size = 10
+        "Fira Code",
+        "FiraCode Nerd Font",
+        "Noto Color Emoji",
+        "Segoe UI Emoji",
+        "JetBrains Mono",
+        "DengXian",
+})
+config.font_size = 12
 
 config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
-
 
 -- Load the modal plugin
 local modal = wezterm.plugin.require("https://github.com/MLFlexer/modal.wezterm")
@@ -76,75 +61,60 @@ modal.set_default_keys(config)
 
 local log
 wezterm.on("restart-current-tab", function(window, pane)
-	local mux_window = window:mux_window()
-	local tabs = mux_window:tabs()
-	-- wezterm.log_info("restart-current-tab triggered")
-	-- wezterm.log_info("tab count = ", #tabs)
-	window:toast_notification(
-		"WezTerm Debug",
-		"Tabs: " .. tostring(#tabs),
-		nil,
-		100
-	)
+        local mux_window = window:mux_window()
+        local tabs = mux_window:tabs()
+        -- wezterm.log_info("restart-current-tab triggered")
+        -- wezterm.log_info("tab count = ", #tabs)
+        window:toast_notification("WezTerm Debug", "Tabs: " .. tostring(#tabs), nil, 100)
 
-	-- If this is the only tab, spawn first so the window doesn't exit
-	if #tabs == 1 then
-		window:toast_notification(
-			"in if condition",
-			"Tabs: " .. tostring(#tabs),
-			nil,
-			100
-		)
+        -- If this is the only tab, spawn first so the window doesn't exit
+        if #tabs == 1 then
+                window:toast_notification("in if condition", "Tabs: " .. tostring(#tabs), nil, 100)
 
-
-
-
-		-- Give Windows time to start the new GUI
-		-- wezterm.time.call_after(0.4, function()
-		-- 	window:perform_action(
-		-- 		act.CloseCurrentTab { confirm = false },
-		-- 		pane
-		-- 	)
-		-- end)
-		-- window:perform_action(
-		-- 	act.SpawnCommandInNewTab {
-		-- 		args = { "pwsh.exe", "-NoLogo" },
-		-- 	},
-		-- 	act.CloseCurrentTab { confirm = false },
-		-- 	pane
-		-- )
-		window:perform_action(
-			act.Multiple {
-				-- act.SpawnCommandInNewTab {
-				-- 	args = { "pwsh.exe", "-NoLogo" },
-				-- },
-				act.CloseCurrentTab { confirm = false },
-		                wezterm.run_child_process { "wezterm.exe" }
-			},
-			pane
-		)
-	else
-		-- If other tabs exist, replace by spawning + closing
-		window:perform_action(
-			act.Multiple {
-				act.SpawnCommandInNewTab {
-					args = { "pwsh.exe", "-NoLogo" },
-				},
-				act.CloseCurrentTab { confirm = false },
-			},
-			pane
-		)
-	end
+                -- Give Windows time to start the new GUI
+                -- wezterm.time.call_after(0.4, function()
+                -- 	window:perform_action(
+                -- 		act.CloseCurrentTab { confirm = false },
+                -- 		pane
+                -- 	)
+                -- end)
+                -- window:perform_action(
+                -- 	act.SpawnCommandInNewTab {
+                -- 		args = { "pwsh.exe", "-NoLogo" },
+                -- 	},
+                -- 	act.CloseCurrentTab { confirm = false },
+                -- 	pane
+                -- )
+                window:perform_action(
+                        act.Multiple({
+                                -- act.SpawnCommandInNewTab {
+                                -- 	args = { "pwsh.exe", "-NoLogo" },
+                                -- },
+                                act.CloseCurrentTab({ confirm = false }),
+                                wezterm.run_child_process({ "wezterm.exe" }),
+                        }),
+                        pane
+                )
+        else
+                -- If other tabs exist, replace by spawning + closing
+                window:perform_action(
+                        act.Multiple({
+                                act.SpawnCommandInNewTab({
+                                        args = { "pwsh.exe", "-NoLogo" },
+                                }),
+                                act.CloseCurrentTab({ confirm = false }),
+                        }),
+                        pane
+                )
+        end
 end)
 
 config.keys = {
-	{
-		key = "r",
-		mods = "CTRL|SHIFT",
-		action = act.EmitEvent("restart-current-tab"),
-	},
+        {
+                key = "r",
+                mods = "CTRL|SHIFT",
+                action = act.EmitEvent("restart-current-tab"),
+        },
 }
-
-
 
 return config

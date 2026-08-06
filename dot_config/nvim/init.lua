@@ -26,9 +26,9 @@ require("core.formatting")
 require("utils.lspConfig")
 
 -- Fzf
-require("fzf.commander")
+--require("fzf.commander")
 require("fzf.fzf-keymaps")
-require("fzf.fzfPaste")
+--require("fzf.fzfPaste")
 
 require("core.custom")
 -- Load plugin configurations

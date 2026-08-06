@@ -78,7 +78,7 @@ end
 
 -- print(vim.o.lines)
 if vim.o.lines <= 39 then
-        print("small screens")
+        -- print("small screens")
         vim.keymap.set("n", "<C-w>h", function()
                 require("splitwise").move_left()
                 --smart_win_nav_or_resize("h")

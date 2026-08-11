@@ -152,6 +152,7 @@ cw A-F4
   j (t! charmod j lalt)
   k (t! charmod k rctl)
   l (t! charmod l rsft)
+  ; (t! charmod ; lmet)
   ;; ; (tap-hold 100 150 ; (macro ; ; left))
   ;; ' (tap-hold 100 150 ' (macro '' left))
   ;; [ (tap-hold 100 150 [ (macro  ] left))
@@ -175,6 +176,13 @@ cw A-F4
   9 (t! charmod 9 rsft)
   0 (t! charmod 0 rmet)
 
+
+reload (multi
+    (cmd touch /tmp/kanata-test)
+    (cmd notify-send Kanata "Reloaded configuration")
+    lrld
+  )
+
 vbuf (tap-hold 150 200 v (layer-toggle vbuffer))
 
 
@@ -183,6 +191,7 @@ mbd (macro ] b)
 
 
 
+btk S-grv
 ;; for vim splits navigation
 
 Vsplit (tap-hold 150 200 v (layer-toggle VimSplits))
@@ -223,7 +232,7 @@ ccl (macro C-g l) ;; commens current line
 
              grv   1        2     3           4           5     6    7     8    9    0      -    =    bspc
              @tab  q       @w     e           r           t     y    u     i    o    p      [    ]    \
-             @caps @a      @s    @d          @f           g     h    @j    @k    @l   ;      '    ret
+             @caps @a      @s    @d          @f           g     h    @j    @k    @l  @;      '    ret
              lsft  z        x  @Vcomment     @Vsplit      b     n    m ,    .    /      rsft
              lctl  lmet    lalt          @spc                         ralt rmet rctl
 
@@ -258,8 +267,8 @@ ccl (macro C-g l) ;; commens current line
 ;; Making a mouse switch toggle to control mouse movements ofcourse @mouse
 ;; v another layer for moving btw vim buffers
 
-             grv  1    2    3    4    5     6          7        8      9        0      @tk   lrld    bspc
-             tab  q    w    e    r    t     y          u        i      o        p       [    ]    \
+             grv  1    2    3    4    5     6          7        8      9        0      @tk   =     @reload
+             tab  q    w    e    r    t     y          u        i      o        p      @btk    ]    \
              caps @a   @s   @d  @f    g    left       down      up     right    ;      A-`   caps
              lsft z    x    c  @vbuf    b    tab        S-tab     S-6    S-4      /      rsft
              lctl lmet lalt         @mouse                        ralt rmet rctl
@@ -267,7 +276,7 @@ ccl (macro C-g l) ;; commens current line
 
 ;; Mouse actions
 ;; You can click the left, middle, and right buttons using kanata actions as well as do vertical and horizontal scrolling.
-;; The mouse button actions are:
+;; The mouse button actions are
 ;; mlft: left mouse button
 ;; mmid: middle mouse button
 ;; mrgt: right mouse button
@@ -278,7 +287,7 @@ ccl (macro C-g l) ;; commens current line
 ;;   mwr (mwheel-right 50 120)
 
 (deflayer mouseLayer
-            grv  1    2    3    4    5    6     7        8       9      0    -   lrld    bspc
+            grv  1    2    3    4    5    6     7        8       9         0        -     lrld    bspc
             tab  q    w    e    r    t    y     mlft      mmid   mrgt   @pyrepl   @pyth    ]    \
             caps a    s    d    f    g   @mwr    @mwd      @mwu    @mwl     ;    '    ret
             lsft z    x    c    v    b    n     m        ,       .      /    rsft

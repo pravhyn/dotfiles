@@ -11,6 +11,7 @@
 hl.on("hyprland.start", function()
         hl.exec_cmd("hyprpaper")
         hl.exec_cmd("nm-applet")
+        hl.exec_cmd("swaync")
         -- hl.exec_cmd("waybar")
         -- hl.exec_cmd("hintsd")
 end)
@@ -41,9 +42,6 @@ hl.monitor({
         scale = 1,
 })
 
-hl.on("hyprland.start", function()
-        hl.exec("hyprpaper")
-end)
 -- hl.bind("ALT + Space", hl.dsp.exec_cmd("wofi --show drun"))
 hl.bind("ALT + Space", hl.dsp.exec_cmd("hyprlauncher"))
 -- Programs
@@ -88,10 +86,6 @@ hl.config({
 })
 
 local mod = "SUPER"
-hl.on("hyprland.start", function()
-        hl.exec_cmd("swaync")
-end)
-
 hl.bind("SUPER + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind("SUPER + I", hl.dsp.exec_cmd("hints"))
 hl.bind("SUPER + Y", hl.dsp.exec_cmd("hints --mode scroll"))

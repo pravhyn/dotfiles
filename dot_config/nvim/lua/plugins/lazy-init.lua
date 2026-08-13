@@ -73,7 +73,7 @@ require("lazy").setup({
 
         { import = "plugins.neotest" },
         -- { import = "plugins.lspSignature" },
-        { import = "plugins.dev" },
+        -- { import = "plugins.dev" },
         { import = "plugins.rainbow" },
         -- { import = "plugins.tabout" },
         -- { import = "plugins.neogit" },
@@ -81,7 +81,6 @@ require("lazy").setup({
         { import = "plugins.lualine" },
         { import = "plugins.nvim-colorizer" },
         -- { import = "plugins.lspSignature" },
-        { import = "plugins.dev" },
         -- { import = "plugins.tabout" },
         { import = "plugins.mini-suite" },
         -- { import = "plugins.neogit" },

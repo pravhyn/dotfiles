@@ -1,7 +1,7 @@
 return {
         "mikesmithgh/kitty-scrollback.nvim",
         enabled = true,
-        lazy = true,
+        lazy = false,
         cmd = {
                 "KittyScrollbackGenerateKittens",
                 "KittyScrollbackCheckHealth",

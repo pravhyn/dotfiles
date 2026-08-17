@@ -19,12 +19,13 @@ require("lazy").setup({
         { import = "plugins.kitty-scrollback" },
 
         { import = "plugins.splits" },
+        -- { import = "plugins.smart-splits" },
         -- List your plugins here, or require separate files
         -- For WebCodeBases
         { import = "plugins.meow-yarn" },
         -- { import = "plugins.arrow-navigation" },
         -- For webDevelopment
-        { import = "plugins.nvim-html-css" },
+        -- { import = "plugins.nvim-html-css" },
         { import = "plugins.autoclose-tag" },
         -- { import = "plugins.telescope" },
         -- {import = "plugins.rustaceanvim"},
@@ -101,7 +102,7 @@ require("lazy").setup({
         -- { import = "plugins.helpers_plugin"}
         { import = "plugins.text-objets" },
         -- { import = "plugins.nvim-rip-substitute" },
-        { import = "plugins.emmet-vim" },
+        -- { import = "plugins.emmet-vim" },
 
         -- { import = "plugins.indent-blankline" },
         -- { import = "plugins.none" },

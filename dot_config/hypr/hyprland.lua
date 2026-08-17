@@ -150,6 +150,13 @@ for i = 1, 9 do
         hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 
+-- Super + Alt + H: previous workspace
+hl.bind("SUPER + ALT + H", hl.dsp.focus({ workspace = "-1" }))
+
+-- Super + Alt + L: next workspace
+hl.bind("SUPER + ALT + L", hl.dsp.focus({ workspace = "+1" }))
+
+hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("notes"))
 -- local external_disabled = false
 --
 -- hl.bind(mod, "L", function()

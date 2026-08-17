@@ -23,7 +23,7 @@
 
 (defchordsv2
 
-(w e) (layer-toggle smart_switch) 70 all-released ()
+;; (w e) (layer-toggle smart_switch) 70 all-released ()
 
 
 

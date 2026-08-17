@@ -13,13 +13,13 @@ return {
                                 enable = false,
                         },
 
-                        completion = {
-                                blink = true,
-                        },
+                        -- completion = {
+                        --         blink = true,
+                        -- },
                         workspaces = {
                                 {
-                                        name = "KnowLedge",
-                                        path = "~/Projects/obsidianVaults/Wisdom",
+                                        name = "Widsom",
+                                        path = "~/Documents/Wisdom",
                                 },
                         },
 

@@ -11,8 +11,8 @@ return {
                 require("splitwise").setup({
                         create_default_keymaps = false,
                 })
-                vim.keymap.set("n", "<C-H>", require("splitwise").move_left, { desc = "Splitwise left" })
-                vim.keymap.set("n", "<C-L>", require("splitwise").move_right, { desc = "Splitwise right" })
+                -- vim.keymap.set("n", "<C-H>", require("splitwise").move_left, { desc = "Splitwise left" })
+                -- vim.keymap.set("n", "<C-L>", require("splitwise").move_right, { desc = "Splitwise right" })
         end,
 
         "nvim-focus/focus.nvim",

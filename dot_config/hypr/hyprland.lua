@@ -33,7 +33,7 @@ hl.monitor({
         output = "eDP-1",
         mode = "1920x1080",
         position = "1920x0",
-        scale = 1.3,
+        scale = 1.1,
 })
 hl.monitor({
         output = "HDMI-A-1",
@@ -57,7 +57,13 @@ hl.bind(
         )
 )
 -- Shift+Print: Region -> save + clipboard
-hl.bind("SUPER + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+-- hl.bind("SUPER + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+hl.bind(
+        "SUPER + Print",
+        hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
+)
+
+hl.bind("SUPER + P", hl.dsp.exec_cmd("hyprpicker -a"))
 -- Basic settings
 hl.config({
         general = {

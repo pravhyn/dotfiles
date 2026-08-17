@@ -1,16 +1,49 @@
-return{
-  "Jezda1337/nvim-html-css",
-  ft = { "css", "scss", "less" },
-  config = function()
-    local scan_paths = vim.fn.globpath("./src", "**/*.{html,jsx,tsx}", true, true)
-    local public_paths = vim.fn.globpath("./public", "**/*.html", true, true)
-    local all_paths = vim.tbl_extend("force", scan_paths, public_paths)
-
-    require("html-css"):setup({
-      filetypes = {
-        "html", "javascriptreact", "typescriptreact", "svelte", "vue",
-      },
-      style_sheets = all_paths,
-    })
-  end,
-} 
+return {
+        "Jezda1337/nvim-html-css",
+        dependencies = {
+                "nvim-treesitter/nvim-treesitter",
+        },
+        opts = {
+                enable_on = {
+                        "html",
+                        "htmldjango",
+                        "tsx",
+                        "jsx",
+                        "erb",
+                        "svelte",
+                        "vue",
+                        "blade",
+                        "php",
+                        "templ",
+                        "astro",
+                },
+                handlers = {
+                        definition = {
+                                bind = "gd",
+                        },
+                        hover = {
+                                bind = "K",
+                                wrap = true,
+                                border = "none",
+                                position = "cursor",
+                        },
+                },
+                documentation = {
+                        auto_show = true,
+                },
+                peek = {
+                        enabled = true,
+                        border = "rounded",
+                        position = "center",
+                        width = 0.5,
+                        height = 0.5,
+                        focus = true,
+                        style = "minimal",
+                },
+                style_sheets = {
+                        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css",
+                        "https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.3/css/bulma.min.css",
+                        "./index.css", -- `./` refers to the current working directory.
+                },
+        },
+}

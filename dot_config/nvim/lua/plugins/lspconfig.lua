@@ -16,9 +16,9 @@ return { -- Main LSP Configuration
         config = function()
                 -- local capabilities = require("blink.lsp").default_capabilities()
 
-                local util = require("lspconfig.util")
+                -- local util = require("lspconfig.util")
 
-                local lspconfig = require("lspconfig")
+                -- local lspconfig = require("lspconfig")
 
                 local root_files = {
                         ".luarc.json",
@@ -134,16 +134,25 @@ return { -- Main LSP Configuration
                         -- Add more servers here if needed
                         -- tsserver = {},
                         -- jsonls = {},
+
+                        emmet_language_server = {
+
+                                init_options = {
+                                        preferences = {
+                                                ["output.inlineBreak"] = 1,
+                                        },
+                                },
+                        },
                 }
+
+                require("mason-lspconfig").setup({
+                        ensure_installed = { "lua_ls", "basedpyright", "emmet_language_server", "ts_ls" }, -- jedi does nothing, "jedi_language_server" },
+                })
 
                 for server, config in pairs(servers) do
                         vim.lsp.config(server, config)
-                        -- vim.lsp.enable(server)
+                        vim.lsp.enable(server)
                 end
-                require("mason-lspconfig").setup({
-                        ensure_installed = { "lua_ls", "basedpyright" }, -- jedi does nothing, "jedi_language_server" },
-                })
-
                 -- actually apply configs
                 -- for server, config in pairs(servers) do
                 --         lspconfig[server].setup(config)
@@ -184,6 +193,7 @@ return { -- Main LSP Configuration
                                                         },
                                                 },
                                         })
+
                                         vim.lsp.enable("lua_ls")
                                         vim.notify("lua_ls reattached with root: " .. choice, vim.log.levels.INFO)
                                 end
